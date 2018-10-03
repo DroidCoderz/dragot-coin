@@ -1,9 +1,9 @@
 import requests
 import json
 import time
-from Mining.Block import Block
-import Mining.Variables as variables
-import Utilities.Utility as Utility
+from Miner.Block import Block
+import Miner.Variables as variables
+import Utility.Utility as Utility
 import User.User as User
 
 import inspect
