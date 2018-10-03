@@ -1,7 +1,7 @@
 import logging
 FORMAT = "[{%(levelname)s} %(filename)s:%(lineno)s 	- %(funcName)20s() ] %(message)s"
 logging.basicConfig(filename='runlog.log', level=logging.DEBUG, format=FORMAT)
-import Miner.Miner as Miner
+import Miner.Mine as Miner
 import Web.Endpoints as Web
 from multiprocessing import Process, Queue
 def welcome_msg():
