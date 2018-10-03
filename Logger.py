@@ -7,7 +7,7 @@ from multiprocessing import Process, Queue
 def welcome_msg():
 
     print("""       =========================================\n
-        HOUR COIN v1.0.0 - BLOCKCHAIN SYSTEM\n
+        Dragot-Coin v1.0 Beta\n
        =========================================\n\n
        """)
 
