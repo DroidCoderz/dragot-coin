@@ -4,6 +4,7 @@ Dragot-Coin
 A crypto currency for the wizarding community.
 
 What is Dragot-Coin?
+
 Dragot-Coin is an new digital crypto-currency utilizing peer-to-peer technology to operate with no central authority.
 
 At the core of Dragot is the Sprinkler-Chain and the SprinklerX Platform.
