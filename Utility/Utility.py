@@ -2,10 +2,10 @@ import base64
 import hashlib
 import secrets
 import string
-import Mining.Variables as variables
+import Miner.Variables as variables
 import inspect
 import time
-from Mining.Block import Block
+from Miner.Block import Block
 from ecdsa import ecdsa
 import logging
 
