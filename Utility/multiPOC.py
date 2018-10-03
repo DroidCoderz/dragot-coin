@@ -29,7 +29,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>HourCrypto/Variables.py at master · HourGlss/HourCrypto</title>
+  <title>HourCrypto/multiPOC.py at master · HourGlss/HourCrypto</title>
     <meta name="description" content="a Re-design of SimpleCoin. Contribute to HourGlss/HourCrypto development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -39,10 +39,10 @@
     <meta property="og:image" content="https://avatars2.githubusercontent.com/u/1668760?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="HourGlss/HourCrypto" /><meta property="og:url" content="https://github.com/HourGlss/HourCrypto" /><meta property="og:description" content="a Re-design of SimpleCoin. Contribute to HourGlss/HourCrypto development by creating an account on GitHub." />
 
   <link rel="assets" href="https://assets-cdn.github.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzE5MjE0NTEzOmM2ZTVhMjg5MDE0ZDMzNGEwYTZlNDljODc4MzEyZmY3ZWE4ZGJlM2Y2YThiNTkxOThhZmIwN2Q5NDk0NTgyNTU=--506c7d799bc53025af85b8075e0ea421dd9958b3">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzE5MjE0NTEzOjU5YTZhNzA2YTdhOGMxM2IyNjczMWYzYTE4ZTFmYTI0MDRjNDg0ZWYwOTk3YmI1NzllNDdkNDQ1MzAyZGY0ODY=--262fbaf0536090d03a9891290e8da033df17a405">
   <meta name="pjax-timeout" content="1000">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="E10F:3481:1DA950F:32E3788:5BB4E38E" data-pjax-transient>
+  <meta name="request-id" content="E10F:3481:1DA6513:32DEDC0:5BB4E320" data-pjax-transient>
 
 
   
@@ -53,7 +53,7 @@
     <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
 
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="E10F:3481:1DA950F:32E3788:5BB4E38E" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="4502975" /><meta name="octolytics-actor-login" content="GitHubDroid" /><meta name="octolytics-actor-hash" content="4e6422d58b4e373ca114787556da4a5401072a52a35350b9fc65ff50ee2d0417" />
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="E10F:3481:1DA6513:32DEDC0:5BB4E320" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="4502975" /><meta name="octolytics-actor-login" content="GitHubDroid" /><meta name="octolytics-actor-hash" content="4e6422d58b4e373ca114787556da4a5401072a52a35350b9fc65ff50ee2d0417" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -72,7 +72,7 @@
     <meta name="user-login" content="GitHubDroid">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="ZmVkNmQ4Y2EyODU3M2VkMjY0YmYxOTBlMmU5YjMyMGZlMDQ0NTVmYWEzMDcyNzNhZTU2NjU4NWZiYTQ2ODhlN3x7InJlbW90ZV9hZGRyZXNzIjoiMTY3LjIwNi4yMjkuMTI5IiwicmVxdWVzdF9pZCI6IkUxMEY6MzQ4MToxREE5NTBGOjMyRTM3ODg6NUJCNEUzOEUiLCJ0aW1lc3RhbXAiOjE1Mzg1ODEzOTYsImhvc3QiOiJnaXRodWIuY29tIn0=">
+    <meta name="js-proxy-site-detection-payload" content="YWQ2NTg2N2I0OTM2NDhkOTVhOTM1ZWI3MDZiM2VlNDY4MWMxNGU4MTBlNjQzMzY5MDdkOWZiNzU1M2Q0ZTI5YXx7InJlbW90ZV9hZGRyZXNzIjoiMTY3LjIwNi4yMjkuMTI5IiwicmVxdWVzdF9pZCI6IkUxMEY6MzQ4MToxREE2NTEzOjMyREVEQzA6NUJCNEUzMjAiLCJ0aW1lc3RhbXAiOjE1Mzg1ODEyODgsImhvc3QiOiJnaXRodWIuY29tIn0=">
 
     <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,MARKETPLACE_RETARGETING,COLLAPSE_REPEATED_COMMENTS">
 
@@ -88,7 +88,7 @@
   <meta name="octolytics-dimension-user_id" content="1668760" /><meta name="octolytics-dimension-user_login" content="HourGlss" /><meta name="octolytics-dimension-repository_id" content="149007287" /><meta name="octolytics-dimension-repository_nwo" content="HourGlss/HourCrypto" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="149007287" /><meta name="octolytics-dimension-repository_network_root_nwo" content="HourGlss/HourCrypto" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
 
 
-    <link rel="canonical" href="https://github.com/HourGlss/HourCrypto/blob/master/Mining/Variables.py" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/HourGlss/HourCrypto/blob/master/Utilities/multiPOC.py" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -157,7 +157,7 @@
           autocapitalize="off"
           aria-autocomplete="list"
           aria-controls="jump-to-results"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=wNh/H6GVQt26f5wcGjhc7mNR3uhfRs/OWk6crjOJmo6FPdm1ATpH7/qsOAucNooAZr7Pz+2eAk4xEByasycuUA=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=92IxQJPqGrlwaQFKDlgG6Y9Qfj7tyTcQ/xvtSMM/eFuyh5fqM0UfizC6pV2IVtAHir9vGV8R+pCURW18Q5HMhQ=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -310,7 +310,7 @@
           <li><a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a></li>
           <li><a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a></li>
           <li>
-            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="NO7qh0GoCBXgc+OsMhLCU1kFBK4fT6kIXpa+QSXrfSzoS/reIzT1XUmMTi1TMuE0czVTKpIWjgNVWsLufDEF/g==" />
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="SuAtmpANenzOTpVQDJKRTRebKg/AUOcoXFbAG+WhGHuWRT3D8pGHNGexONFtsrIqPat9i00JwCNXmry0vHtgqQ==" />
               <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
                 Sign out
               </button>
@@ -323,7 +323,7 @@
 
 
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="hhaU+I4fi5jvGTD+mBAjzKpOAHGe2NcsaJF/OiSYueNas4Sh7IN20EbmnX/5MACrgH5X9ROB8CdjXQOVfULBMQ==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="X3yTPGxy8HkHTaktXfLIH/oZfGJFMYJtZILPCx3/iPWD2YNlDu4NMa6yBKw80ut40Ckr5shopWZvTrOkRCXwJw==" />
           <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
             Sign out
           </button>
@@ -362,7 +362,7 @@
 
       <ul class="pagehead-actions">
   <li>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="d7sttUofcD9EnKvPCalLmdPkXzlsl+uj17dmXx2/8eKXpLmu0JApAqrPPmgpVWOOH2HA+Pvzno3aVIZIgwaI2Q==" />      <input type="hidden" name="repository_id" id="repository_id" value="149007287" class="form-control" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="vLOX2OXumkwKp05N+lgn0H7y3EORhRW8dxEWQ7aAevtcrAPDf2HDceT02+rapA/HsndDggbhYJJ68vZUKDkDwA==" />      <input type="hidden" name="repository_id" id="repository_id" value="149007287" class="form-control" />
 
       <details class="details-reset details-overlay select-menu float-left">
         <summary class="btn btn-sm btn-with-count select-menu-button" data-ga-click="Repository, click Watch settings, action:blob#show">
@@ -425,7 +425,7 @@
   <li>
     
   <div class="js-toggler-container js-social-container starring-container ">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/HourGlss/HourCrypto/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="SNXn+DH/fvSlIT0WdmmV0l2R5nrHW8ydz6Gn0biLkoRfQs41Jbke95kTkpKIlznsXcj1yJgnqTyhvjfJ08cVNw==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/HourGlss/HourCrypto/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="OfeS+VBLcGdaQEMnMiBd3BHgyNRa1ZdmVCx+1c6WCZIuYLs0RA0QZGZy7KPM3vHiEbnbZgWp8sc6M+7NpdqOIQ==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -440,7 +440,7 @@
           0
         </a>
 </form>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/HourGlss/HourCrypto/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="xfQSsI/QDUYFN9Qj9t8ZZ7l6HJF9m5LyZIqiLRKhKXK25OA1np5FxUVLA997lbdMVfqNOJC3/mYt4UHqH+R5nA==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/HourGlss/HourCrypto/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="UPsc1EgQvB9kjVfCod99IY09rPmSnzK1F3Gn4Xy06Bcj6+5RWV70nCTxgD4sldMKYb09UH+zXiFeGkQmcfG4+Q==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -556,9 +556,9 @@
     
 
   
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/HourGlss/HourCrypto/blob/f1061f24d627f6770985a24877e68a01a9da0aca/Mining/Variables.py">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/HourGlss/HourCrypto/blob/f1061f24d627f6770985a24877e68a01a9da0aca/Utilities/multiPOC.py">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v21:8f51f1c2921985cda80a229c0d090d07 -->
+    <!-- blob contrib key: blob_contributors:v21:5bb8bc6a484e974ea11fe5754eb19d0e -->
 
     
 
@@ -602,7 +602,7 @@
 
 
             <a class="select-menu-item js-navigation-item js-navigation-open selected"
-               href="/HourGlss/HourCrypto/blob/master/Mining/Variables.py"
+               href="/HourGlss/HourCrypto/blob/master/Utilities/multiPOC.py"
                data-name="master"
                data-skip-pjax="true"
                rel="nofollow">
@@ -641,12 +641,12 @@
         </clipboard-copy>
       </div>
       <div id="blob-path" class="breadcrumb">
-        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto"><span>HourCrypto</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto/tree/master/Mining"><span>Mining</span></a></span><span class="separator">/</span><strong class="final-path">Variables.py</strong>
+        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto"><span>HourCrypto</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto/tree/master/Utilities"><span>Utilities</span></a></span><span class="separator">/</span><strong class="final-path">multiPOC.py</strong>
       </div>
     </div>
 
 
-    <include-fragment src="/HourGlss/HourCrypto/contributors/master/Mining/Variables.py" class="commit-tease commit-loader">
+    <include-fragment src="/HourGlss/HourCrypto/contributors/master/Utilities/multiPOC.py" class="commit-tease commit-loader">
       <div>
         Fetching contributors&hellip;
       </div>
@@ -663,25 +663,25 @@
   <div class="file-actions">
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/raw/master/Mining/Variables.py">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/HourGlss/HourCrypto/blame/master/Mining/Variables.py">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/commits/master/Mining/Variables.py">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/raw/master/Utilities/multiPOC.py">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/HourGlss/HourCrypto/blame/master/Utilities/multiPOC.py">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/commits/master/Utilities/multiPOC.py">History</a>
     </div>
 
         <a class="btn-octicon tooltipped tooltipped-nw"
-           href="github-windows://openRepo/https://github.com/HourGlss/HourCrypto?branch=master&amp;filepath=Mining%2FVariables.py"
+           href="github-windows://openRepo/https://github.com/HourGlss/HourCrypto?branch=master&amp;filepath=Utilities%2FmultiPOC.py"
            aria-label="Open this file in GitHub Desktop"
            data-ga-click="Repository, open with desktop, type:windows">
             <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
         </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/HourGlss/HourCrypto/edit/master/Mining/Variables.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="DAXCKlcBJcrHkDe1qUlpXmprL/VFpC9xd7CDOtVs9kaAZCNoB2X61qliAPK+2QwEK9npzBpWQy1zTV7ma3VOUg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/HourGlss/HourCrypto/edit/master/Utilities/multiPOC.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="14V0ogZblTLl830GUWt4OS/EtoyXG9u3xlPAr5GhUQoE+V+7Kswd45k8mapwHG9hDkAcOlIKG8fywggVmSW7Qg==" />
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Edit the file in your fork of this project" data-hotkey="e" data-disable-with>
               <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
             </button>
 </form>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/HourGlss/HourCrypto/delete/master/Mining/Variables.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="4Ezgir7Usbmt6EJaXPtfxoozvnq03GJ/ReNwHHQsLMcswBENuNSS533XGlxi0bLM0ICApTeVcgIFfteUzjCBUg==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/HourGlss/HourCrypto/delete/master/Utilities/multiPOC.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Leu+1FXoyj6rakTM1YTfBTTM7HkndZUimvOKBadR2WEXmuEkBI9IVzTg+oqtaWqia4IXu+DD5cvWSDad4HKLmw==" />
           <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
             aria-label="Delete the file in your fork of this project" data-disable-with>
             <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
@@ -689,9 +689,9 @@
 </form>  </div>
 
   <div class="file-info">
-      11 lines (10 sloc)
+      61 lines (51 sloc)
       <span class="file-info-divider"></span>
-    356 Bytes
+    1.56 KB
   </div>
 </div>
 
@@ -701,48 +701,252 @@
       <table class="highlight tab-size js-file-line-container" data-tab-size="8">
       <tr>
         <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
-        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> logging</td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> multiprocessing <span class="pl-k">import</span> Process, Queue</td>
       </tr>
       <tr>
         <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
-        <td id="LC2" class="blob-code blob-code-inner js-file-line">logging.info(<span class="pl-s"><span class="pl-pds">&quot;</span>Loading Variables<span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> random</td>
       </tr>
       <tr>
         <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
-        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">WORK</span> <span class="pl-k">=</span> <span class="pl-c1">18</span></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> hashlib</td>
       </tr>
       <tr>
         <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> string</td>
       </tr>
       <tr>
         <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">PEER_NODES</span> <span class="pl-k">=</span> []</td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> secrets</td>
       </tr>
       <tr>
         <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">MINER_NODE_URL</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>127.0.0.1<span class="pl-pds">&quot;</span></span></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> time</td>
       </tr>
       <tr>
         <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">PORT</span> <span class="pl-k">=</span> <span class="pl-c1">5000</span></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> os</td>
       </tr>
       <tr>
         <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
-        <td id="LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">BLOCKCHAIN</span> <span class="pl-k">=</span> []</td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">PENDING_TRANSACTIONS</span> <span class="pl-k">=</span> []</td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line">logging.debug(<span class="pl-s"><span class="pl-pds">&quot;</span>work: <span class="pl-c1">{}</span> peers:<span class="pl-c1">{}</span> node_url:<span class="pl-c1">{}</span> port: <span class="pl-c1">{}</span> blockchain: <span class="pl-c1">{}</span> pending: <span class="pl-c1">{}</span><span class="pl-pds">&quot;</span></span>.format(<span class="pl-c1">WORK</span>,<span class="pl-c1">PEER_NODES</span>,<span class="pl-c1">MINER_NODE_URL</span>,<span class="pl-c1">PORT</span>,<span class="pl-c1">BLOCKCHAIN</span>,<span class="pl-c1">PENDING_TRANSACTIONS</span>))</td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">buildpow</span>(<span class="pl-smi">index</span>,<span class="pl-smi">timestamp</span>,<span class="pl-smi">effort</span>,<span class="pl-smi">data</span>,<span class="pl-smi">previous_hash</span>):</td>
       </tr>
       <tr>
         <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line">logging.info(<span class="pl-s"><span class="pl-pds">&quot;</span>Done loading Variables<span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">    m <span class="pl-k">=</span> hashlib.sha256()</td>
+      </tr>
+      <tr>
+        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line">    m.update((<span class="pl-c1">str</span>(index) <span class="pl-k">+</span> <span class="pl-c1">str</span>(timestamp) <span class="pl-k">+</span> <span class="pl-c1">str</span>(effort) <span class="pl-k">+</span> <span class="pl-c1">str</span>(data) <span class="pl-k">+</span> <span class="pl-c1">str</span>(previous_hash)).encode(<span class="pl-s"><span class="pl-pds">&#39;</span>utf-8<span class="pl-pds">&#39;</span></span>))</td>
+      </tr>
+      <tr>
+        <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> m</td>
+      </tr>
+      <tr>
+        <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">random_str</span>():</td>
+      </tr>
+      <tr>
+        <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span> Generate a random size string</span></td>
+      </tr>
+      <tr>
+        <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line">    rand_str <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span></td>
+      </tr>
+      <tr>
+        <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> i <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">0</span>, <span class="pl-c1">1</span> <span class="pl-k">+</span> secrets.randbelow(<span class="pl-c1">25</span>)):</td>
+      </tr>
+      <tr>
+        <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line">        rand_str <span class="pl-k">+=</span> string.ascii_lowercase[secrets.randbelow(<span class="pl-c1">26</span>)]  <span class="pl-c"><span class="pl-c">#</span> each char is a random downcase letter [a-z]</span></td>
+      </tr>
+      <tr>
+        <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> rand_str</td>
+      </tr>
+      <tr>
+        <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">leadingzeroes</span>(<span class="pl-smi">digest</span>):</td>
+      </tr>
+      <tr>
+        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line">    n <span class="pl-k">=</span> <span class="pl-c1">0</span></td>
+      </tr>
+      <tr>
+        <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line">    result <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span>.join(<span class="pl-c1">format</span>(x, <span class="pl-s"><span class="pl-pds">&#39;</span>08b<span class="pl-pds">&#39;</span></span>) <span class="pl-k">for</span> x <span class="pl-k">in</span> <span class="pl-c1">bytearray</span>(digest))</td>
+      </tr>
+      <tr>
+        <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> c <span class="pl-k">in</span> result:</td>
+      </tr>
+      <tr>
+        <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> c <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&#39;</span>0<span class="pl-pds">&#39;</span></span>:</td>
+      </tr>
+      <tr>
+        <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line">            n <span class="pl-k">+=</span> <span class="pl-c1">1</span></td>
+      </tr>
+      <tr>
+        <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">else</span>:</td>
+      </tr>
+      <tr>
+        <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">break</span></td>
+      </tr>
+      <tr>
+        <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> n</td>
+      </tr>
+      <tr>
+        <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="LC32" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">genhash</span>(<span class="pl-smi">index</span>,<span class="pl-smi">timestamp</span>,<span class="pl-smi">data</span>,<span class="pl-smi">last_hash</span>):</td>
+      </tr>
+      <tr>
+        <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line">    effort <span class="pl-k">=</span> random_str()</td>
+      </tr>
+      <tr>
+        <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="LC34" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> effort, buildpow(index,timestamp,effort,data,last_hash)</td>
+      </tr>
+      <tr>
+        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="LC35" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="LC36" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="LC37" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">foo</span>(<span class="pl-smi">a</span>,<span class="pl-smi">i</span>):</td>
+      </tr>
+      <tr>
+        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="LC38" class="blob-code blob-code-inner js-file-line">    done <span class="pl-k">=</span> <span class="pl-c1">False</span></td>
+      </tr>
+      <tr>
+        <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="LC39" class="blob-code blob-code-inner js-file-line">    pow_hash_object <span class="pl-k">=</span> <span class="pl-c1">None</span></td>
+      </tr>
+      <tr>
+        <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="LC40" class="blob-code blob-code-inner js-file-line">    effort <span class="pl-k">=</span> <span class="pl-c1">None</span></td>
+      </tr>
+      <tr>
+        <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="LC41" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">while</span> a.empty():</td>
+      </tr>
+      <tr>
+        <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="LC42" class="blob-code blob-code-inner js-file-line">        data <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">&quot;</span>stuff<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>done<span class="pl-pds">&quot;</span></span>}</td>
+      </tr>
+      <tr>
+        <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="LC43" class="blob-code blob-code-inner js-file-line">        effort, pow_hash_object <span class="pl-k">=</span> genhash(<span class="pl-c1">1</span>, time.time(), data, <span class="pl-s"><span class="pl-pds">&quot;</span>0<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="LC44" class="blob-code blob-code-inner js-file-line">        leading_zeroes <span class="pl-k">=</span> leadingzeroes(pow_hash_object.digest())</td>
+      </tr>
+      <tr>
+        <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
+        <td id="LC45" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> leading_zeroes <span class="pl-k">&gt;=</span> <span class="pl-c1">20</span>:</td>
+      </tr>
+      <tr>
+        <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
+        <td id="LC46" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">break</span></td>
+      </tr>
+      <tr>
+        <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
+        <td id="LC47" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> <span class="pl-k">not</span> a.empty():</td>
+      </tr>
+      <tr>
+        <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
+        <td id="LC48" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">False</span></td>
+      </tr>
+      <tr>
+        <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
+        <td id="LC49" class="blob-code blob-code-inner js-file-line">    a.put((i,pow_hash_object.hexdigest()))</td>
+      </tr>
+      <tr>
+        <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
+        <td id="LC50" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> <span class="pl-c1">True</span></td>
+      </tr>
+      <tr>
+        <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
+        <td id="LC51" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
+        <td id="LC52" class="blob-code blob-code-inner js-file-line"><span class="pl-k">if</span> <span class="pl-c1">__name__</span> <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&#39;</span>__main__<span class="pl-pds">&#39;</span></span>:</td>
+      </tr>
+      <tr>
+        <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
+        <td id="LC53" class="blob-code blob-code-inner js-file-line">    a <span class="pl-k">=</span> Queue()</td>
+      </tr>
+      <tr>
+        <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
+        <td id="LC54" class="blob-code blob-code-inner js-file-line">    processes <span class="pl-k">=</span> []</td>
+      </tr>
+      <tr>
+        <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
+        <td id="LC55" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> i <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">0</span>,os.cpu_count()<span class="pl-k">-</span><span class="pl-c1">2</span>):</td>
+      </tr>
+      <tr>
+        <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
+        <td id="LC56" class="blob-code blob-code-inner js-file-line">        processes.append(Process(<span class="pl-v">target</span><span class="pl-k">=</span>foo, <span class="pl-v">args</span><span class="pl-k">=</span>(a,i)))</td>
+      </tr>
+      <tr>
+        <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
+        <td id="LC57" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L58" class="blob-num js-line-number" data-line-number="58"></td>
+        <td id="LC58" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> i <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">len</span>(processes)):</td>
+      </tr>
+      <tr>
+        <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
+        <td id="LC59" class="blob-code blob-code-inner js-file-line">        processes[i].start()</td>
+      </tr>
+      <tr>
+        <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
+        <td id="LC60" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">print</span>(a.get())</td>
       </tr>
 </table>
 
@@ -754,7 +958,7 @@
       <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy link">Copy link</clipboard-copy></li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/HourGlss/HourCrypto/blame/f1061f24d627f6770985a24877e68a01a9da0aca/Mining/Variables.py">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/HourGlss/HourCrypto/blame/f1061f24d627f6770985a24877e68a01a9da0aca/Utilities/multiPOC.py">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/HourGlss/HourCrypto/issues/new">Open new issue</a></li>
       </ul>
     </details-menu>
@@ -789,7 +993,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2018 <span title="0.22666s from unicorn-3249217539-1q6jl">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2018 <span title="0.28288s from unicorn-3817350216-hg4lp">GitHub</span>, Inc.</li>
         <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>

@@ -29,7 +29,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>HourCrypto/Wallet.py at master · HourGlss/HourCrypto</title>
+  <title>HourCrypto/Mining.py at master · HourGlss/HourCrypto</title>
     <meta name="description" content="a Re-design of SimpleCoin. Contribute to HourGlss/HourCrypto development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -39,10 +39,10 @@
     <meta property="og:image" content="https://avatars2.githubusercontent.com/u/1668760?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="HourGlss/HourCrypto" /><meta property="og:url" content="https://github.com/HourGlss/HourCrypto" /><meta property="og:description" content="a Re-design of SimpleCoin. Contribute to HourGlss/HourCrypto development by creating an account on GitHub." />
 
   <link rel="assets" href="https://assets-cdn.github.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzE5MjE0NTEzOmUwNDAyMGU0MmIzYzg4NGU4ODk0NmIzMDNmYzQzYzhmMTIzYmQyNjIxYjY0NmRiYTRlNDhkNTc2ZWRhZWIxN2U=--cc721804de21563dcfc5eb4ce74ca1d9143fd54c">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzE5MjE0NTEzOjczZTQwM2JkNmQyMjYxNDBlNDI1ZmE2MzdhNjNkOTNmNjU2ZWFmZjkyY2NmMGNmYTYyZTYwNGFiZGI0Yjg1ZTU=--5513cacd66c7d4549cb722278a8405c44e9e67ca">
   <meta name="pjax-timeout" content="1000">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="E10F:3481:1DA9A89:32E3B30:5BB4E394" data-pjax-transient>
+  <meta name="request-id" content="E10F:3481:1DAAD2F:32E5E51:5BB4E3C4" data-pjax-transient>
 
 
   
@@ -53,7 +53,7 @@
     <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
 
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="E10F:3481:1DA9A89:32E3B30:5BB4E394" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="4502975" /><meta name="octolytics-actor-login" content="GitHubDroid" /><meta name="octolytics-actor-hash" content="4e6422d58b4e373ca114787556da4a5401072a52a35350b9fc65ff50ee2d0417" />
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="E10F:3481:1DAAD2F:32E5E51:5BB4E3C4" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="4502975" /><meta name="octolytics-actor-login" content="GitHubDroid" /><meta name="octolytics-actor-hash" content="4e6422d58b4e373ca114787556da4a5401072a52a35350b9fc65ff50ee2d0417" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -72,7 +72,7 @@
     <meta name="user-login" content="GitHubDroid">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="OGNiOTVhYTJlNTUyNmI1YWEzNmVmMTI5NWZlYTBjZjQ3ZDA2YTAyMjQ2ODQ2NmFlZWYzMDMxOGViMGIwNzgzNnx7InJlbW90ZV9hZGRyZXNzIjoiMTY3LjIwNi4yMjkuMTI5IiwicmVxdWVzdF9pZCI6IkUxMEY6MzQ4MToxREE5QTg5OjMyRTNCMzA6NUJCNEUzOTQiLCJ0aW1lc3RhbXAiOjE1Mzg1ODE0MDgsImhvc3QiOiJnaXRodWIuY29tIn0=">
+    <meta name="js-proxy-site-detection-payload" content="ODJhNjllNjQxNTM3YjA5OTcwYTg0NDBkYTJkMjJhYjYzM2JiNzFjYzAwMDU4YTYxMWFlMzY1NTJlOTY3YTE2N3x7InJlbW90ZV9hZGRyZXNzIjoiMTY3LjIwNi4yMjkuMTI5IiwicmVxdWVzdF9pZCI6IkUxMEY6MzQ4MToxREFBRDJGOjMyRTVFNTE6NUJCNEUzQzQiLCJ0aW1lc3RhbXAiOjE1Mzg1ODE0NDcsImhvc3QiOiJnaXRodWIuY29tIn0=">
 
     <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,MARKETPLACE_RETARGETING,COLLAPSE_REPEATED_COMMENTS">
 
@@ -88,7 +88,7 @@
   <meta name="octolytics-dimension-user_id" content="1668760" /><meta name="octolytics-dimension-user_login" content="HourGlss" /><meta name="octolytics-dimension-repository_id" content="149007287" /><meta name="octolytics-dimension-repository_nwo" content="HourGlss/HourCrypto" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="149007287" /><meta name="octolytics-dimension-repository_network_root_nwo" content="HourGlss/HourCrypto" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
 
 
-    <link rel="canonical" href="https://github.com/HourGlss/HourCrypto/blob/master/Mining/Wallet.py" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/HourGlss/HourCrypto/blob/master/Backup/Mining.py" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -157,7 +157,7 @@
           autocapitalize="off"
           aria-autocomplete="list"
           aria-controls="jump-to-results"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=WprGvkXZ/RYGHpW4bEHTLGvCENBhveA8Eqpm/GhTGQEff2AU5Xb4JEbNMa/qTwXCbi0B99NlLbx59ObI6P2t3w=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=ffG9tI4A7DExxr52Jx/MOS6lMDZrC9Wg7666wv1wHHw4FBseLq/pA3EVGmGhERrXK0ohEdnTGCCE8Dr2fd6oog=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -310,7 +310,7 @@
           <li><a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a></li>
           <li><a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a></li>
           <li>
-            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="WghNEhbH2fzQ+4HUhACjCAvSATcOFNINLqajdRt+tYKGrV1LdFsktHkELFXlIIBvIeJWs4NN9QYlat/aQqTNUA==" />
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="cj9JxODbX8h96TucK8fBY4KVKtgGrd1SGyHZAiyHbYSumlmdgkeigNQWlh1K5+IEqKV9XIv0+lkQ7aWtdV0VVg==" />
               <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
                 Sign out
               </button>
@@ -323,7 +323,7 @@
 
 
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="kTE9nlj3eRfS2p5JJc6LRZr1oGo0lM3UmhCs9P+4gkdNlC3HOmuEX3slM8hE7qgisMX37rnN6t+R3NBbpmL6lQ==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="b49Jx5iIr3NJkAuzd1ay6Y8MsNKR96oPy8PITnaNHquzKlme+hRSO+BvpjIWdpGOpTznVhyujQTAD7ThL1dmeQ==" />
           <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
             Sign out
           </button>
@@ -362,7 +362,7 @@
 
       <ul class="pagehead-actions">
   <li>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="naB5U8N0cSjV0+/NXTAy8dBKtVWJn13Rf1EoSLtPnCd9v+1IWfsoFTuAemp9zBrmHM8qlB77KP9ysshfJfblHA==" />      <input type="hidden" name="repository_id" id="repository_id" value="149007287" class="form-control" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Q3LGPMvYV8xkZ6l3NYMSdbv0YQvTBLueUE+9G9HZ+ROjbVInUVcO8Yo0PNAVfzpid3H+ykRgzrBdrF0MT2CAKA==" />      <input type="hidden" name="repository_id" id="repository_id" value="149007287" class="form-control" />
 
       <details class="details-reset details-overlay select-menu float-left">
         <summary class="btn btn-sm btn-with-count select-menu-button" data-ga-click="Repository, click Watch settings, action:blob#show">
@@ -425,7 +425,7 @@
   <li>
     
   <div class="js-toggler-container js-social-container starring-container ">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/HourGlss/HourCrypto/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="P8XQ+XFv4vh6chZ7RMEHbyUR97gyGmE7C2PXSUG+iWUoUvk0ZSmC+0ZAuf+6P6tRJUjkCm1mBJplfEdRKvIO1g==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/HourGlss/HourCrypto/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="dYwac8kWEhOryNMIauymCStZmrn+/GNNjiVuCHYVSu5iGzO+3VByEJf6fIyUEgo3KwCJC6GABuzgOv4QHVnNXQ==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -440,7 +440,7 @@
           0
         </a>
 </form>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/HourGlss/HourCrypto/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="HriejkQWwNrZWSlqFWw19AfeITZaxh2+yflhpU0499JtqGwLVViIWZkl/paYJpvf616wn7fqcSqAkoJiQH2nPA==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/HourGlss/HourCrypto/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="GOvuqX4D5Op68pB4jnpvaBUEdM8sx9B0sgy4JW/hs0xr+xwsb02saTqOR4QDMMFD+YTlZsHrvOD7Z1viYqTjog==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -556,9 +556,9 @@
     
 
   
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/HourGlss/HourCrypto/blob/f1061f24d627f6770985a24877e68a01a9da0aca/Mining/Wallet.py">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/HourGlss/HourCrypto/blob/f1061f24d627f6770985a24877e68a01a9da0aca/Backup/Mining.py">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v21:7b9f42cf4135b494ed9132916e614992 -->
+    <!-- blob contrib key: blob_contributors:v21:8ca45419f90ed83109a9fb984bc1d9d0 -->
 
     
 
@@ -602,7 +602,7 @@
 
 
             <a class="select-menu-item js-navigation-item js-navigation-open selected"
-               href="/HourGlss/HourCrypto/blob/master/Mining/Wallet.py"
+               href="/HourGlss/HourCrypto/blob/master/Backup/Mining.py"
                data-name="master"
                data-skip-pjax="true"
                rel="nofollow">
@@ -641,12 +641,12 @@
         </clipboard-copy>
       </div>
       <div id="blob-path" class="breadcrumb">
-        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto"><span>HourCrypto</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto/tree/master/Mining"><span>Mining</span></a></span><span class="separator">/</span><strong class="final-path">Wallet.py</strong>
+        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto"><span>HourCrypto</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto/tree/master/Backup"><span>Backup</span></a></span><span class="separator">/</span><strong class="final-path">Mining.py</strong>
       </div>
     </div>
 
 
-    <include-fragment src="/HourGlss/HourCrypto/contributors/master/Mining/Wallet.py" class="commit-tease commit-loader">
+    <include-fragment src="/HourGlss/HourCrypto/contributors/master/Backup/Mining.py" class="commit-tease commit-loader">
       <div>
         Fetching contributors&hellip;
       </div>
@@ -663,25 +663,25 @@
   <div class="file-actions">
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/raw/master/Mining/Wallet.py">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/HourGlss/HourCrypto/blame/master/Mining/Wallet.py">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/commits/master/Mining/Wallet.py">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/raw/master/Backup/Mining.py">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/HourGlss/HourCrypto/blame/master/Backup/Mining.py">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/commits/master/Backup/Mining.py">History</a>
     </div>
 
         <a class="btn-octicon tooltipped tooltipped-nw"
-           href="github-windows://openRepo/https://github.com/HourGlss/HourCrypto?branch=master&amp;filepath=Mining%2FWallet.py"
+           href="github-windows://openRepo/https://github.com/HourGlss/HourCrypto?branch=master&amp;filepath=Backup%2FMining.py"
            aria-label="Open this file in GitHub Desktop"
            data-ga-click="Repository, open with desktop, type:windows">
             <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
         </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/HourGlss/HourCrypto/edit/master/Mining/Wallet.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="wedofT1cgOdzwPJ/4gWIzlKRi7wies93SOB3D3RPETSlz/qmoNLwPvNApYX2uBWxAT7WTv6qgccKwKl9MuQzzQ==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/HourGlss/HourCrypto/edit/master/Backup/Mining.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="jmxLvEFKCl1ZzGYU3MauEu+QZZ3JpUfl7QLJiAsULOv8WU3D4fyejZZcxmFmn3qpmJ6pCNOpLyFZWDbDvCmYfA==" />
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Edit the file in your fork of this project" data-hotkey="e" data-disable-with>
               <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
             </button>
 </form>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/HourGlss/HourCrypto/delete/master/Mining/Wallet.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="9scuoN6/8pTo7mTBNLGN1aU35DcYjDawOqgWvyYGtF3s7IUBe6cJjFPlUsSeZL7QBMFncVqLlryumNogEEW37w==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/HourGlss/HourCrypto/delete/master/Backup/Mining.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="A4aUysktVLs0FEDVhTH1gLvEx/Zh4cvA+d5VMZ7DqUEpL2Pl+8eULiDObdAuTjy6/tEbYXXFp/Xk3/wJ5SLNrQ==" />
           <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
             aria-label="Delete the file in your fork of this project" data-disable-with>
             <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
@@ -689,9 +689,9 @@
 </form>  </div>
 
   <div class="file-info">
-      141 lines (121 sloc)
+      210 lines (114 sloc)
       <span class="file-info-divider"></span>
-    6.18 KB
+    4.28 KB
   </div>
 </div>
 
@@ -701,23 +701,23 @@
       <table class="highlight tab-size js-file-line-container" data-tab-size="8">
       <tr>
         <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
-        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-s"><span class="pl-pds">&quot;&quot;&quot;</span>This is going to be your wallet. Here you can do several things:</span></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-s"><span class="pl-pds">&#39;&#39;&#39;</span></span></td>
       </tr>
       <tr>
         <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
-        <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-s">- Generate a new address (public and private key). You are going</span></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
-        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-s">to use this address (public key) to send or receive any transactions. You can</span></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-s">have as many addresses as you wish, but keep in mind that if you</span></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-s">lose its credential data, you will not be able to retrieve it.</span></td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
@@ -725,11 +725,11 @@
       </tr>
       <tr>
         <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-s">- Send coins to another address</span></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-s">LEGACY CODE</span></td>
       </tr>
       <tr>
         <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
-        <td id="LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-s">- Retrieve the entire blockchain and check your balance</span></td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
@@ -737,15 +737,15 @@
       </tr>
       <tr>
         <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-s">If this is your first time using this script don&#39;t forget to generate</span></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-s">a new address and edit miner config file with it (only if you are</span></td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
-        <td id="LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-s">going to mine).</span></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-s">Only use this to steal ideas from</span></td>
       </tr>
       <tr>
         <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
@@ -753,524 +753,792 @@
       </tr>
       <tr>
         <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
-        <td id="LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-s">Timestamp in hashed message. When you send your transaction it will be received</span></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
-        <td id="LC15" class="blob-code blob-code-inner js-file-line"><span class="pl-s">by several nodes. If any node mine a block, your transaction will get added to the</span></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
-        <td id="LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-s">blockchain but other nodes still will have it pending. If any node see that your</span></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
-        <td id="LC17" class="blob-code blob-code-inner js-file-line"><span class="pl-s">transaction with same timestamp was added, they should remove it from the</span></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
-        <td id="LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-s">node_pending_transactions list to avoid it get processed more than 1 time.</span></td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
-        <td id="LC19" class="blob-code blob-code-inner js-file-line"><span class="pl-s"><span class="pl-pds">&quot;&quot;&quot;</span></span></td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
-        <td id="LC20" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
-        <td id="LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> requests</td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
-        <td id="LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> time</td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
-        <td id="LC23" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> base64</td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
-        <td id="LC24" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> ecdsa</td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
-        <td id="LC25" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
-        <td id="LC26" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
-        <td id="LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">wallet</span>():</td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
-        <td id="LC28" class="blob-code blob-code-inner js-file-line">    response <span class="pl-k">=</span> <span class="pl-c1">None</span></td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
-        <td id="LC29" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">while</span> response <span class="pl-k">not</span> <span class="pl-k">in</span> [<span class="pl-s"><span class="pl-pds">&quot;</span>1<span class="pl-pds">&quot;</span></span>, <span class="pl-s"><span class="pl-pds">&quot;</span>2<span class="pl-pds">&quot;</span></span>, <span class="pl-s"><span class="pl-pds">&quot;</span>3<span class="pl-pds">&quot;</span></span>]:</td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
-        <td id="LC30" class="blob-code blob-code-inner js-file-line">        response <span class="pl-k">=</span> <span class="pl-c1">input</span>(<span class="pl-s"><span class="pl-pds">&quot;&quot;&quot;</span>What do you want to do?</span></td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
-        <td id="LC31" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        1. Generate new wallet</span></td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
-        <td id="LC32" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        2. Send coins to another wallet</span></td>
+        <td id="LC32" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
-        <td id="LC33" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        3. Check transactions<span class="pl-cce">\n</span><span class="pl-pds">&quot;&quot;&quot;</span></span>)</td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
-        <td id="LC34" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> response <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&quot;</span>1<span class="pl-pds">&quot;</span></span>:</td>
+        <td id="LC34" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
-        <td id="LC35" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"><span class="pl-c">#</span> Generate new wallet</span></td>
+        <td id="LC35" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
-        <td id="LC36" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">&quot;&quot;&quot;</span>=========================================<span class="pl-cce">\n</span></span></td>
+        <td id="LC36" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
-        <td id="LC37" class="blob-code blob-code-inner js-file-line"><span class="pl-s">IMPORTANT: save this credentials or you won&#39;t be able to recover your wallet<span class="pl-cce">\n</span></span></td>
+        <td id="LC37" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
-        <td id="LC38" class="blob-code blob-code-inner js-file-line"><span class="pl-s">=========================================<span class="pl-cce">\n</span><span class="pl-pds">&quot;&quot;&quot;</span></span>)</td>
+        <td id="LC38" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
-        <td id="LC39" class="blob-code blob-code-inner js-file-line">        generate_ECDSA_keys()</td>
+        <td id="LC39" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
-        <td id="LC40" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">elif</span> response <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&quot;</span>2<span class="pl-pds">&quot;</span></span>:</td>
+        <td id="LC40" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
-        <td id="LC41" class="blob-code blob-code-inner js-file-line">        addr_from <span class="pl-k">=</span> <span class="pl-c1">input</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>From: introduce your wallet address (public key)<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC41" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
-        <td id="LC42" class="blob-code blob-code-inner js-file-line">        private_key <span class="pl-k">=</span> <span class="pl-c1">input</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Introduce your private key<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC42" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
-        <td id="LC43" class="blob-code blob-code-inner js-file-line">        addr_to <span class="pl-k">=</span> <span class="pl-c1">input</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>To: introduce destination wallet address<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC43" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
-        <td id="LC44" class="blob-code blob-code-inner js-file-line">        amount <span class="pl-k">=</span> <span class="pl-c1">input</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Amount: number stating how much do you want to send<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC44" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
-        <td id="LC45" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>=========================================<span class="pl-cce">\n\n</span><span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC45" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
-        <td id="LC46" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Is everything correct?<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC46" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
-        <td id="LC47" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>From: <span class="pl-c1">{0}</span><span class="pl-cce">\n</span>Private Key: <span class="pl-c1">{1}</span><span class="pl-cce">\n</span>To: <span class="pl-c1">{2}</span><span class="pl-cce">\n</span>Amount: <span class="pl-c1">{3}</span><span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>.format(addr_from, private_key, addr_to, amount))</td>
+        <td id="LC47" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
-        <td id="LC48" class="blob-code blob-code-inner js-file-line">        response <span class="pl-k">=</span> <span class="pl-c1">input</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>y/n<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC48" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
-        <td id="LC49" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>From: <span class="pl-c1">{0}</span><span class="pl-cce">\n</span>Private Key: <span class="pl-c1">{1}</span><span class="pl-cce">\n</span>To: <span class="pl-c1">{2}</span><span class="pl-cce">\n</span>Amount: <span class="pl-c1">{3}</span><span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>.format(addr_from, private_key, addr_to, amount))</td>
+        <td id="LC49" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
-        <td id="LC50" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> response.lower() <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&quot;</span>y<span class="pl-pds">&quot;</span></span>:</td>
+        <td id="LC50" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
-        <td id="LC51" class="blob-code blob-code-inner js-file-line">            send_transaction(addr_from, private_key, addr_to, amount)</td>
+        <td id="LC51" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
-        <td id="LC52" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">else</span>:  <span class="pl-c"><span class="pl-c">#</span> Will always occur when response == 3.</span></td>
+        <td id="LC52" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
-        <td id="LC53" class="blob-code blob-code-inner js-file-line">        check_transactions()</td>
+        <td id="LC53" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
-        <td id="LC54" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC54" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
-        <td id="LC55" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC55" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
-        <td id="LC56" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">send_transaction</span>(<span class="pl-smi">addr_from</span>, <span class="pl-smi">private_key</span>, <span class="pl-smi">addr_to</span>, <span class="pl-smi">amount</span>):</td>
+        <td id="LC56" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
-        <td id="LC57" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">&quot;&quot;&quot;</span>Sends your transaction to different nodes. Once any of the nodes manage</span></td>
+        <td id="LC57" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L58" class="blob-num js-line-number" data-line-number="58"></td>
-        <td id="LC58" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    to mine a block, your transaction will be added to the blockchain. Despite</span></td>
+        <td id="LC58" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
-        <td id="LC59" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    that, there is a low chance your transaction gets canceled due to other nodes</span></td>
+        <td id="LC59" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
-        <td id="LC60" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    having a longer chain. So make sure your transaction is deep into the chain</span></td>
+        <td id="LC60" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L61" class="blob-num js-line-number" data-line-number="61"></td>
-        <td id="LC61" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    before claiming it as approved!</span></td>
+        <td id="LC61" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L62" class="blob-num js-line-number" data-line-number="62"></td>
-        <td id="LC62" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    <span class="pl-pds">&quot;&quot;&quot;</span></span></td>
+        <td id="LC62" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L63" class="blob-num js-line-number" data-line-number="63"></td>
-        <td id="LC63" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span> For fast debugging REMOVE LATER</span></td>
+        <td id="LC63" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import time</span></td>
       </tr>
       <tr>
         <td id="L64" class="blob-num js-line-number" data-line-number="64"></td>
-        <td id="LC64" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span> private_key=&quot;181f2448fa4636315032e15bb9cbc3053e10ed062ab0b2680a37cd8cb51f53f2&quot;</span></td>
+        <td id="LC64" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import hashlib</span></td>
       </tr>
       <tr>
         <td id="L65" class="blob-num js-line-number" data-line-number="65"></td>
-        <td id="LC65" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span> amount=&quot;3000&quot;</span></td>
+        <td id="LC65" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import sys</span></td>
       </tr>
       <tr>
         <td id="L66" class="blob-num js-line-number" data-line-number="66"></td>
-        <td id="LC66" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span> addr_from=&quot;SD5IZAuFixM3PTmkm5ShvLm1tbDNOmVlG7tg6F5r7VHxPNWkNKbzZfa+JdKmfBAIhWs9UKnQLOOL1U+R3WxcsQ==&quot;</span></td>
+        <td id="LC66" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import json</span></td>
       </tr>
       <tr>
         <td id="L67" class="blob-num js-line-number" data-line-number="67"></td>
-        <td id="LC67" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span> addr_to=&quot;SD5IZAuFixM3PTmkm5ShvLm1tbDNOmVlG7tg6F5r7VHxPNWkNKbzZfa+JdKmfBAIhWs9UKnQLOOL1U+R3WxcsQ==&quot;</span></td>
+        <td id="LC67" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L68" class="blob-num js-line-number" data-line-number="68"></td>
-        <td id="LC68" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC68" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import os</span></td>
       </tr>
       <tr>
         <td id="L69" class="blob-num js-line-number" data-line-number="69"></td>
-        <td id="LC69" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> <span class="pl-c1">len</span>(private_key) <span class="pl-k">==</span> <span class="pl-c1">64</span>:</td>
+        <td id="LC69" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import secrets</span></td>
       </tr>
       <tr>
         <td id="L70" class="blob-num js-line-number" data-line-number="70"></td>
-        <td id="LC70" class="blob-code blob-code-inner js-file-line">        signature, message <span class="pl-k">=</span> sign_ECDSA_msg(private_key)</td>
+        <td id="LC70" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import string</span></td>
       </tr>
       <tr>
         <td id="L71" class="blob-num js-line-number" data-line-number="71"></td>
-        <td id="LC71" class="blob-code blob-code-inner js-file-line">        url <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>http://localhost:5000/txion<span class="pl-pds">&#39;</span></span></td>
+        <td id="LC71" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import base64</span></td>
       </tr>
       <tr>
         <td id="L72" class="blob-num js-line-number" data-line-number="72"></td>
-        <td id="LC72" class="blob-code blob-code-inner js-file-line">        payload <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">&quot;</span>from<span class="pl-pds">&quot;</span></span>: addr_from,</td>
+        <td id="LC72" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
-        <td id="LC73" class="blob-code blob-code-inner js-file-line">                   <span class="pl-s"><span class="pl-pds">&quot;</span>to<span class="pl-pds">&quot;</span></span>: addr_to,</td>
+        <td id="LC73" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L74" class="blob-num js-line-number" data-line-number="74"></td>
-        <td id="LC74" class="blob-code blob-code-inner js-file-line">                   <span class="pl-s"><span class="pl-pds">&quot;</span>amount<span class="pl-pds">&quot;</span></span>: amount,</td>
+        <td id="LC74" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import ecdsa</span></td>
       </tr>
       <tr>
         <td id="L75" class="blob-num js-line-number" data-line-number="75"></td>
-        <td id="LC75" class="blob-code blob-code-inner js-file-line">                   <span class="pl-s"><span class="pl-pds">&quot;</span>signature<span class="pl-pds">&quot;</span></span>: signature.decode(),</td>
+        <td id="LC75" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import secrets</span></td>
       </tr>
       <tr>
         <td id="L76" class="blob-num js-line-number" data-line-number="76"></td>
-        <td id="LC76" class="blob-code blob-code-inner js-file-line">                   <span class="pl-s"><span class="pl-pds">&quot;</span>message<span class="pl-pds">&quot;</span></span>: message}</td>
+        <td id="LC76" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import string</span></td>
       </tr>
       <tr>
         <td id="L77" class="blob-num js-line-number" data-line-number="77"></td>
-        <td id="LC77" class="blob-code blob-code-inner js-file-line">        headers <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">&quot;</span>Content-Type<span class="pl-pds">&quot;</span></span>: <span class="pl-s"><span class="pl-pds">&quot;</span>application/json<span class="pl-pds">&quot;</span></span>}</td>
+        <td id="LC77" class="blob-code blob-code-inner js-file-line"><span class="pl-s">import logging</span></td>
       </tr>
       <tr>
         <td id="L78" class="blob-num js-line-number" data-line-number="78"></td>
-        <td id="LC78" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC78" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L79" class="blob-num js-line-number" data-line-number="79"></td>
-        <td id="LC79" class="blob-code blob-code-inner js-file-line">        res <span class="pl-k">=</span> requests.post(url, <span class="pl-v">json</span><span class="pl-k">=</span>payload, <span class="pl-v">headers</span><span class="pl-k">=</span>headers)</td>
+        <td id="LC79" class="blob-code blob-code-inner js-file-line"><span class="pl-s"># Node&#39;s blockchain copy</span></td>
       </tr>
       <tr>
         <td id="L80" class="blob-num js-line-number" data-line-number="80"></td>
-        <td id="LC80" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">print</span>(res.text)</td>
+        <td id="LC80" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L81" class="blob-num js-line-number" data-line-number="81"></td>
-        <td id="LC81" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">else</span>:</td>
+        <td id="LC81" class="blob-code blob-code-inner js-file-line"><span class="pl-s">&quot;&quot;&quot; Stores the transactions that this node has in a list.</span></td>
       </tr>
       <tr>
         <td id="L82" class="blob-num js-line-number" data-line-number="82"></td>
-        <td id="LC82" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Wrong address or key length! Verify and try again.<span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC82" class="blob-code blob-code-inner js-file-line"><span class="pl-s">If the node you sent the transaction adds a block</span></td>
       </tr>
       <tr>
         <td id="L83" class="blob-num js-line-number" data-line-number="83"></td>
-        <td id="LC83" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC83" class="blob-code blob-code-inner js-file-line"><span class="pl-s">it will get accepted, but there is a chance it gets</span></td>
       </tr>
       <tr>
         <td id="L84" class="blob-num js-line-number" data-line-number="84"></td>
-        <td id="LC84" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC84" class="blob-code blob-code-inner js-file-line"><span class="pl-s">discarded and your transaction goes back as if it was never</span></td>
       </tr>
       <tr>
         <td id="L85" class="blob-num js-line-number" data-line-number="85"></td>
-        <td id="LC85" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">check_transactions</span>():</td>
+        <td id="LC85" class="blob-code blob-code-inner js-file-line"><span class="pl-s">processed&quot;&quot;&quot;</span></td>
       </tr>
       <tr>
         <td id="L86" class="blob-num js-line-number" data-line-number="86"></td>
-        <td id="LC86" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span><span class="pl-k">TODO</span> This needs to check transactions for accuracy</span></td>
+        <td id="LC86" class="blob-code blob-code-inner js-file-line"><span class="pl-s">NODE_PENDING_TRANSACTIONS = []</span></td>
       </tr>
       <tr>
         <td id="L87" class="blob-num js-line-number" data-line-number="87"></td>
-        <td id="LC87" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">pass</span></td>
+        <td id="LC87" class="blob-code blob-code-inner js-file-line"><span class="pl-s">BLOCKCHAIN = []</span></td>
       </tr>
       <tr>
         <td id="L88" class="blob-num js-line-number" data-line-number="88"></td>
-        <td id="LC88" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC88" class="blob-code blob-code-inner js-file-line"><span class="pl-s">ROOT = False</span></td>
       </tr>
       <tr>
         <td id="L89" class="blob-num js-line-number" data-line-number="89"></td>
-        <td id="LC89" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC89" class="blob-code blob-code-inner js-file-line"><span class="pl-s">if len(PEER_NODES) == 0:</span></td>
       </tr>
       <tr>
         <td id="L90" class="blob-num js-line-number" data-line-number="90"></td>
-        <td id="LC90" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">generate_ECDSA_keys</span>():</td>
+        <td id="LC90" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    ROOT = True</span></td>
       </tr>
       <tr>
         <td id="L91" class="blob-num js-line-number" data-line-number="91"></td>
-        <td id="LC91" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">&quot;&quot;&quot;</span>This function takes care of creating your private and public (your address) keys.</span></td>
+        <td id="LC91" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    BLOCKCHAIN.append(create_genesis_block())</span></td>
       </tr>
       <tr>
         <td id="L92" class="blob-num js-line-number" data-line-number="92"></td>
-        <td id="LC92" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    It&#39;s very important you don&#39;t lose any of them or those wallets will be lost</span></td>
+        <td id="LC92" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L93" class="blob-num js-line-number" data-line-number="93"></td>
-        <td id="LC93" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    forever. If someone else get access to your private key, you risk losing your coins.</span></td>
+        <td id="LC93" class="blob-code blob-code-inner js-file-line"><span class="pl-s">def proof_of_work(a,last_block, data):</span></td>
       </tr>
       <tr>
         <td id="L94" class="blob-num js-line-number" data-line-number="94"></td>
-        <td id="LC94" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+        <td id="LC94" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    start_time = time.time()</span></td>
       </tr>
       <tr>
         <td id="L95" class="blob-num js-line-number" data-line-number="95"></td>
-        <td id="LC95" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    private_key: str</span></td>
+        <td id="LC95" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    global ROOT</span></td>
       </tr>
       <tr>
         <td id="L96" class="blob-num js-line-number" data-line-number="96"></td>
-        <td id="LC96" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    public_ley: base64 (to make it shorter)</span></td>
+        <td id="LC96" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    if ROOT:</span></td>
       </tr>
       <tr>
         <td id="L97" class="blob-num js-line-number" data-line-number="97"></td>
-        <td id="LC97" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    <span class="pl-pds">&quot;&quot;&quot;</span></span></td>
+        <td id="LC97" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        new_block_index = last_block.index + 1</span></td>
       </tr>
       <tr>
         <td id="L98" class="blob-num js-line-number" data-line-number="98"></td>
-        <td id="LC98" class="blob-code blob-code-inner js-file-line">    sk <span class="pl-k">=</span> ecdsa.SigningKey.generate(<span class="pl-v">curve</span><span class="pl-k">=</span>ecdsa.SECP256k1) <span class="pl-c"><span class="pl-c">#</span>this is your sign (private key)</span></td>
+        <td id="LC98" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        new_block_timestamp = time.time()</span></td>
       </tr>
       <tr>
         <td id="L99" class="blob-num js-line-number" data-line-number="99"></td>
-        <td id="LC99" class="blob-code blob-code-inner js-file-line">    private_key <span class="pl-k">=</span> sk.to_string().hex() <span class="pl-c"><span class="pl-c">#</span>convert your private key to hex</span></td>
+        <td id="LC99" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L100" class="blob-num js-line-number" data-line-number="100"></td>
-        <td id="LC100" class="blob-code blob-code-inner js-file-line">    vk <span class="pl-k">=</span> sk.get_verifying_key() <span class="pl-c"><span class="pl-c">#</span>this is your verification key (public key)</span></td>
+        <td id="LC100" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    NODE_PENDING_TRANSACTIONS = []</span></td>
       </tr>
       <tr>
         <td id="L101" class="blob-num js-line-number" data-line-number="101"></td>
-        <td id="LC101" class="blob-code blob-code-inner js-file-line">    public_key <span class="pl-k">=</span> vk.to_string().hex()</td>
+        <td id="LC101" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L102" class="blob-num js-line-number" data-line-number="102"></td>
-        <td id="LC102" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span>we are going to encode the public key to make it shorter</span></td>
+        <td id="LC102" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L103" class="blob-num js-line-number" data-line-number="103"></td>
-        <td id="LC103" class="blob-code blob-code-inner js-file-line">    public_key <span class="pl-k">=</span> base64.b64encode(<span class="pl-c1">bytes</span>.fromhex(public_key))</td>
+        <td id="LC103" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L104" class="blob-num js-line-number" data-line-number="104"></td>
-        <td id="LC104" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">while</span> <span class="pl-s"><span class="pl-pds">&quot;</span>+<span class="pl-pds">&quot;</span></span> <span class="pl-k">in</span> public_key.decode() <span class="pl-k">or</span> <span class="pl-s"><span class="pl-pds">&quot;</span>+<span class="pl-pds">&quot;</span></span> <span class="pl-k">in</span> private_key:</td>
+        <td id="LC104" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    lead = 0</span></td>
       </tr>
       <tr>
         <td id="L105" class="blob-num js-line-number" data-line-number="105"></td>
-        <td id="LC105" class="blob-code blob-code-inner js-file-line">        sk <span class="pl-k">=</span> ecdsa.SigningKey.generate(<span class="pl-v">curve</span><span class="pl-k">=</span>ecdsa.SECP256k1)  <span class="pl-c"><span class="pl-c">#</span> this is your sign (private key)</span></td>
+        <td id="LC105" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    if ROOT:</span></td>
       </tr>
       <tr>
         <td id="L106" class="blob-num js-line-number" data-line-number="106"></td>
-        <td id="LC106" class="blob-code blob-code-inner js-file-line">        private_key <span class="pl-k">=</span> sk.to_string().hex()  <span class="pl-c"><span class="pl-c">#</span> convert your private key to hex</span></td>
+        <td id="LC106" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        effort, pow_hash = genhash()</span></td>
       </tr>
       <tr>
         <td id="L107" class="blob-num js-line-number" data-line-number="107"></td>
-        <td id="LC107" class="blob-code blob-code-inner js-file-line">        vk <span class="pl-k">=</span> sk.get_verifying_key()  <span class="pl-c"><span class="pl-c">#</span> this is your verification key (public key)</span></td>
+        <td id="LC107" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L108" class="blob-num js-line-number" data-line-number="108"></td>
-        <td id="LC108" class="blob-code blob-code-inner js-file-line">        public_key <span class="pl-k">=</span> vk.to_string().hex()</td>
+        <td id="LC108" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        global WORK</span></td>
       </tr>
       <tr>
         <td id="L109" class="blob-num js-line-number" data-line-number="109"></td>
-        <td id="LC109" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"><span class="pl-c">#</span> we are going to encode the public key to make it shorter</span></td>
+        <td id="LC109" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        lead = leadingzeroes(pow_hash.digest())</span></td>
       </tr>
       <tr>
         <td id="L110" class="blob-num js-line-number" data-line-number="110"></td>
-        <td id="LC110" class="blob-code blob-code-inner js-file-line">        public_key <span class="pl-k">=</span> base64.b64encode(<span class="pl-c1">bytes</span>.fromhex(public_key))</td>
+        <td id="LC110" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    while lead &lt; WORK:</span></td>
       </tr>
       <tr>
         <td id="L111" class="blob-num js-line-number" data-line-number="111"></td>
-        <td id="LC111" class="blob-code blob-code-inner js-file-line">    </td>
+        <td id="LC111" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        if len(BLOCKCHAIN) == 0:</span></td>
       </tr>
       <tr>
         <td id="L112" class="blob-num js-line-number" data-line-number="112"></td>
-        <td id="LC112" class="blob-code blob-code-inner js-file-line">    filename <span class="pl-k">=</span> <span class="pl-c1">input</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Write the name of your new address: <span class="pl-pds">&quot;</span></span>) <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">&quot;</span>.txt<span class="pl-pds">&quot;</span></span></td>
+        <td id="LC112" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            ROOT = False</span></td>
       </tr>
       <tr>
         <td id="L113" class="blob-num js-line-number" data-line-number="113"></td>
-        <td id="LC113" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">with</span> <span class="pl-c1">open</span>(filename, <span class="pl-s"><span class="pl-pds">&quot;</span>w<span class="pl-pds">&quot;</span></span>) <span class="pl-k">as</span> f:</td>
+        <td id="LC113" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        # Check if any node found the solution every 60 seconds</span></td>
       </tr>
       <tr>
         <td id="L114" class="blob-num js-line-number" data-line-number="114"></td>
-        <td id="LC114" class="blob-code blob-code-inner js-file-line">        f.write(<span class="pl-s"><span class="pl-pds">&quot;</span>Private key: <span class="pl-c1">{0}</span><span class="pl-cce">\n</span>Wallet address / Public key: <span class="pl-c1">{1}</span><span class="pl-pds">&quot;</span></span>.format(private_key, public_key.decode()))</td>
+        <td id="LC114" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        if not ROOT or int((time.time() - start_time) % 60) == 0:</span></td>
       </tr>
       <tr>
         <td id="L115" class="blob-num js-line-number" data-line-number="115"></td>
-        <td id="LC115" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Your new address and private key are now in the file <span class="pl-c1">{0}</span><span class="pl-pds">&quot;</span></span>.format(filename))</td>
+        <td id="LC115" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            ROOT = True</span></td>
       </tr>
       <tr>
         <td id="L116" class="blob-num js-line-number" data-line-number="116"></td>
-        <td id="LC116" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC116" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            # If any other node got the proof, stop searching</span></td>
       </tr>
       <tr>
         <td id="L117" class="blob-num js-line-number" data-line-number="117"></td>
-        <td id="LC117" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">sign_ECDSA_msg</span>(<span class="pl-smi">private_key</span>):</td>
+        <td id="LC117" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            new_blockchain = consensus(a)</span></td>
       </tr>
       <tr>
         <td id="L118" class="blob-num js-line-number" data-line-number="118"></td>
-        <td id="LC118" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">&quot;&quot;&quot;</span>Sign the message to be sent</span></td>
+        <td id="LC118" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            if new_blockchain:</span></td>
       </tr>
       <tr>
         <td id="L119" class="blob-num js-line-number" data-line-number="119"></td>
-        <td id="LC119" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    private_key: must be hex</span></td>
+        <td id="LC119" class="blob-code blob-code-inner js-file-line"><span class="pl-s">                return False, new_blockchain</span></td>
       </tr>
       <tr>
         <td id="L120" class="blob-num js-line-number" data-line-number="120"></td>
-        <td id="LC120" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+        <td id="LC120" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        # generate new hash for next time</span></td>
       </tr>
       <tr>
         <td id="L121" class="blob-num js-line-number" data-line-number="121"></td>
-        <td id="LC121" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    return</span></td>
+        <td id="LC121" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        effort, pow_hash = genhash()</span></td>
       </tr>
       <tr>
         <td id="L122" class="blob-num js-line-number" data-line-number="122"></td>
-        <td id="LC122" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    signature: base64 (to make it shorter)</span></td>
+        <td id="LC122" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        lead = leadingzeroes(pow_hash.digest())</span></td>
       </tr>
       <tr>
         <td id="L123" class="blob-num js-line-number" data-line-number="123"></td>
-        <td id="LC123" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    message: str</span></td>
+        <td id="LC123" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        if not a.empty():</span></td>
       </tr>
       <tr>
         <td id="L124" class="blob-num js-line-number" data-line-number="124"></td>
-        <td id="LC124" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    <span class="pl-pds">&quot;&quot;&quot;</span></span></td>
+        <td id="LC124" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            qget = a.get()</span></td>
       </tr>
       <tr>
         <td id="L125" class="blob-num js-line-number" data-line-number="125"></td>
-        <td id="LC125" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span> Get timestamp, round it, make it into a string and encode it to bytes</span></td>
+        <td id="LC125" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L126" class="blob-num js-line-number" data-line-number="126"></td>
-        <td id="LC126" class="blob-code blob-code-inner js-file-line">    message <span class="pl-k">=</span> <span class="pl-c1">str</span>(<span class="pl-c1">round</span>(time.time()))</td>
+        <td id="LC126" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            qfrom = qget[0]</span></td>
       </tr>
       <tr>
         <td id="L127" class="blob-num js-line-number" data-line-number="127"></td>
-        <td id="LC127" class="blob-code blob-code-inner js-file-line">    bmessage <span class="pl-k">=</span> message.encode()</td>
+        <td id="LC127" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            new_block = qget[1]</span></td>
       </tr>
       <tr>
         <td id="L128" class="blob-num js-line-number" data-line-number="128"></td>
-        <td id="LC128" class="blob-code blob-code-inner js-file-line">    sk <span class="pl-k">=</span> ecdsa.SigningKey.from_string(<span class="pl-c1">bytes</span>.fromhex(private_key), <span class="pl-v">curve</span><span class="pl-k">=</span>ecdsa.SECP256k1)</td>
+        <td id="LC128" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            print(&quot;received a block&quot;,qfrom)</span></td>
       </tr>
       <tr>
         <td id="L129" class="blob-num js-line-number" data-line-number="129"></td>
-        <td id="LC129" class="blob-code blob-code-inner js-file-line">    signature <span class="pl-k">=</span> base64.b64encode(sk.sign(bmessage))</td>
+        <td id="LC129" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            if validate(new_block) and new_block.previous_hash == BLOCKCHAIN[len(BLOCKCHAIN) - 1].previous_hash:</span></td>
       </tr>
       <tr>
         <td id="L130" class="blob-num js-line-number" data-line-number="130"></td>
-        <td id="LC130" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> signature, message</td>
+        <td id="LC130" class="blob-code blob-code-inner js-file-line"><span class="pl-s">                BLOCKCHAIN.append(new_block)</span></td>
       </tr>
       <tr>
         <td id="L131" class="blob-num js-line-number" data-line-number="131"></td>
-        <td id="LC131" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC131" class="blob-code blob-code-inner js-file-line"><span class="pl-s">                return False, BLOCKCHAIN</span></td>
       </tr>
       <tr>
         <td id="L132" class="blob-num js-line-number" data-line-number="132"></td>
-        <td id="LC132" class="blob-code blob-code-inner js-file-line"><span class="pl-k">if</span> <span class="pl-c1">__name__</span> <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&#39;</span>__main__<span class="pl-pds">&#39;</span></span>:</td>
+        <td id="LC132" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L133" class="blob-num js-line-number" data-line-number="133"></td>
-        <td id="LC133" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">&quot;&quot;&quot;</span>       =========================================<span class="pl-cce">\n</span></span></td>
+        <td id="LC133" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    # Once that hash is found, we can return it as a proof of our work</span></td>
       </tr>
       <tr>
         <td id="L134" class="blob-num js-line-number" data-line-number="134"></td>
-        <td id="LC134" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        SIMPLE COIN v1.0.0 - BLOCKCHAIN SYSTEM<span class="pl-cce">\n</span></span></td>
+        <td id="LC134" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    mined_block = Block(new_block_index, new_block_timestamp, pow_hash.hexdigest(),effort, data, last_block.hash)</span></td>
       </tr>
       <tr>
         <td id="L135" class="blob-num js-line-number" data-line-number="135"></td>
-        <td id="LC135" class="blob-code blob-code-inner js-file-line"><span class="pl-s">       =========================================<span class="pl-cce">\n\n</span></span></td>
+        <td id="LC135" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    return True, mined_block</span></td>
       </tr>
       <tr>
         <td id="L136" class="blob-num js-line-number" data-line-number="136"></td>
-        <td id="LC136" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        You can find more help at: https://github.com/cosme12/SimpleCoin<span class="pl-cce">\n</span></span></td>
+        <td id="LC136" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L137" class="blob-num js-line-number" data-line-number="137"></td>
-        <td id="LC137" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        Make sure you are using the latest version or you may end in</span></td>
+        <td id="LC137" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
       </tr>
       <tr>
         <td id="L138" class="blob-num js-line-number" data-line-number="138"></td>
-        <td id="LC138" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        a parallel chain.<span class="pl-cce">\n\n\n</span><span class="pl-pds">&quot;&quot;&quot;</span></span>)</td>
+        <td id="LC138" class="blob-code blob-code-inner js-file-line"><span class="pl-s">def mine(a, blockchain, node_pending_transactions):</span></td>
       </tr>
       <tr>
         <td id="L139" class="blob-num js-line-number" data-line-number="139"></td>
-        <td id="LC139" class="blob-code blob-code-inner js-file-line">    wallet()</td>
+        <td id="LC139" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    global BLOCKCHAIN</span></td>
       </tr>
       <tr>
         <td id="L140" class="blob-num js-line-number" data-line-number="140"></td>
-        <td id="LC140" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">input</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Press any key to exit...<span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC140" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    global WORK</span></td>
+      </tr>
+      <tr>
+        <td id="L141" class="blob-num js-line-number" data-line-number="141"></td>
+        <td id="LC141" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    NODE_PENDING_TRANSACTIONS = node_pending_transactions</span></td>
+      </tr>
+      <tr>
+        <td id="L142" class="blob-num js-line-number" data-line-number="142"></td>
+        <td id="LC142" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    while True:</span></td>
+      </tr>
+      <tr>
+        <td id="L143" class="blob-num js-line-number" data-line-number="143"></td>
+        <td id="LC143" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        &quot;&quot;&quot;Mining is the only way that new coins can be created.</span></td>
+      </tr>
+      <tr>
+        <td id="L144" class="blob-num js-line-number" data-line-number="144"></td>
+        <td id="LC144" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        In order to prevent too many coins to be created, the process</span></td>
+      </tr>
+      <tr>
+        <td id="L145" class="blob-num js-line-number" data-line-number="145"></td>
+        <td id="LC145" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        is slowed down by a proof of work algorithm.</span></td>
+      </tr>
+      <tr>
+        <td id="L146" class="blob-num js-line-number" data-line-number="146"></td>
+        <td id="LC146" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        &quot;&quot;&quot;</span></td>
+      </tr>
+      <tr>
+        <td id="L147" class="blob-num js-line-number" data-line-number="147"></td>
+        <td id="LC147" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        # Get the last proof of work</span></td>
+      </tr>
+      <tr>
+        <td id="L148" class="blob-num js-line-number" data-line-number="148"></td>
+        <td id="LC148" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        last_block = None</span></td>
+      </tr>
+      <tr>
+        <td id="L149" class="blob-num js-line-number" data-line-number="149"></td>
+        <td id="LC149" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        new_block_data = None</span></td>
+      </tr>
+      <tr>
+        <td id="L150" class="blob-num js-line-number" data-line-number="150"></td>
+        <td id="LC150" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        if ROOT:</span></td>
+      </tr>
+      <tr>
+        <td id="L151" class="blob-num js-line-number" data-line-number="151"></td>
+        <td id="LC151" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            last_block = BLOCKCHAIN[len(BLOCKCHAIN) - 1]</span></td>
+      </tr>
+      <tr>
+        <td id="L152" class="blob-num js-line-number" data-line-number="152"></td>
+        <td id="LC152" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L153" class="blob-num js-line-number" data-line-number="153"></td>
+        <td id="LC153" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            NODE_PENDING_TRANSACTIONS = requests.get(</span></td>
+      </tr>
+      <tr>
+        <td id="L154" class="blob-num js-line-number" data-line-number="154"></td>
+        <td id="LC154" class="blob-code blob-code-inner js-file-line"><span class="pl-s">                &quot;http://&quot; + MINER_NODE_URL + &quot;:&quot; + str(PORT) + &quot;/txion?update=&quot; + user.public_key).content</span></td>
+      </tr>
+      <tr>
+        <td id="L155" class="blob-num js-line-number" data-line-number="155"></td>
+        <td id="LC155" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            NODE_PENDING_TRANSACTIONS = json.loads(NODE_PENDING_TRANSACTIONS)</span></td>
+      </tr>
+      <tr>
+        <td id="L156" class="blob-num js-line-number" data-line-number="156"></td>
+        <td id="LC156" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L157" class="blob-num js-line-number" data-line-number="157"></td>
+        <td id="LC157" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            # Then we add the mining reward</span></td>
+      </tr>
+      <tr>
+        <td id="L158" class="blob-num js-line-number" data-line-number="158"></td>
+        <td id="LC158" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            NODE_PENDING_TRANSACTIONS.append({</span></td>
+      </tr>
+      <tr>
+        <td id="L159" class="blob-num js-line-number" data-line-number="159"></td>
+        <td id="LC159" class="blob-code blob-code-inner js-file-line"><span class="pl-s">                &quot;from&quot;: &quot;network&quot;,</span></td>
+      </tr>
+      <tr>
+        <td id="L160" class="blob-num js-line-number" data-line-number="160"></td>
+        <td id="LC160" class="blob-code blob-code-inner js-file-line"><span class="pl-s">                &quot;to&quot;: user.public_key,</span></td>
+      </tr>
+      <tr>
+        <td id="L161" class="blob-num js-line-number" data-line-number="161"></td>
+        <td id="LC161" class="blob-code blob-code-inner js-file-line"><span class="pl-s">                &quot;amount&quot;: 1.0})</span></td>
+      </tr>
+      <tr>
+        <td id="L162" class="blob-num js-line-number" data-line-number="162"></td>
+        <td id="LC162" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L163" class="blob-num js-line-number" data-line-number="163"></td>
+        <td id="LC163" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            new_block_data = {&quot;transactions&quot;: list(NODE_PENDING_TRANSACTIONS)}</span></td>
+      </tr>
+      <tr>
+        <td id="L164" class="blob-num js-line-number" data-line-number="164"></td>
+        <td id="LC164" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        proof = proof_of_work(a,last_block, new_block_data)</span></td>
+      </tr>
+      <tr>
+        <td id="L165" class="blob-num js-line-number" data-line-number="165"></td>
+        <td id="LC165" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        if not proof[0]:</span></td>
+      </tr>
+      <tr>
+        <td id="L166" class="blob-num js-line-number" data-line-number="166"></td>
+        <td id="LC166" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            BLOCKCHAIN = proof[1]</span></td>
+      </tr>
+      <tr>
+        <td id="L167" class="blob-num js-line-number" data-line-number="167"></td>
+        <td id="LC167" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            continue</span></td>
+      </tr>
+      <tr>
+        <td id="L168" class="blob-num js-line-number" data-line-number="168"></td>
+        <td id="LC168" class="blob-code blob-code-inner js-file-line"><span class="pl-s">        else:</span></td>
+      </tr>
+      <tr>
+        <td id="L169" class="blob-num js-line-number" data-line-number="169"></td>
+        <td id="LC169" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            mined_block = proof[1]</span></td>
+      </tr>
+      <tr>
+        <td id="L170" class="blob-num js-line-number" data-line-number="170"></td>
+        <td id="LC170" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L171" class="blob-num js-line-number" data-line-number="171"></td>
+        <td id="LC171" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            String</span></td>
+      </tr>
+      <tr>
+        <td id="L172" class="blob-num js-line-number" data-line-number="172"></td>
+        <td id="LC172" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            print(&quot;#&quot;,mined_block)</span></td>
+      </tr>
+      <tr>
+        <td id="L173" class="blob-num js-line-number" data-line-number="173"></td>
+        <td id="LC173" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            String</span></td>
+      </tr>
+      <tr>
+        <td id="L174" class="blob-num js-line-number" data-line-number="174"></td>
+        <td id="LC174" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            REPR</span></td>
+      </tr>
+      <tr>
+        <td id="L175" class="blob-num js-line-number" data-line-number="175"></td>
+        <td id="LC175" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            # print(&quot;b{} = &quot;.format(mined_block.index), repr(mined_block))</span></td>
+      </tr>
+      <tr>
+        <td id="L176" class="blob-num js-line-number" data-line-number="176"></td>
+        <td id="LC176" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            # if last_block.index == 1:</span></td>
+      </tr>
+      <tr>
+        <td id="L177" class="blob-num js-line-number" data-line-number="177"></td>
+        <td id="LC177" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            #     print(&#39;work = {}&#39;.format(work))</span></td>
+      </tr>
+      <tr>
+        <td id="L178" class="blob-num js-line-number" data-line-number="178"></td>
+        <td id="LC178" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            #     print(&quot;blockchain = [&quot;, end=&quot;&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L179" class="blob-num js-line-number" data-line-number="179"></td>
+        <td id="LC179" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            #     for i in range(0, len(BLOCKCHAIN)+1):</span></td>
+      </tr>
+      <tr>
+        <td id="L180" class="blob-num js-line-number" data-line-number="180"></td>
+        <td id="LC180" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            #         print(&quot;b{}&quot;.format(i), end=&quot;,&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L181" class="blob-num js-line-number" data-line-number="181"></td>
+        <td id="LC181" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            #     print(&quot;]&quot;)</span></td>
+      </tr>
+      <tr>
+        <td id="L182" class="blob-num js-line-number" data-line-number="182"></td>
+        <td id="LC182" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            #     sys.exit()</span></td>
+      </tr>
+      <tr>
+        <td id="L183" class="blob-num js-line-number" data-line-number="183"></td>
+        <td id="LC183" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L184" class="blob-num js-line-number" data-line-number="184"></td>
+        <td id="LC184" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            END REPR</span></td>
+      </tr>
+      <tr>
+        <td id="L185" class="blob-num js-line-number" data-line-number="185"></td>
+        <td id="LC185" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L186" class="blob-num js-line-number" data-line-number="186"></td>
+        <td id="LC186" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            BLOCKCHAIN.append(mined_block)</span></td>
+      </tr>
+      <tr>
+        <td id="L187" class="blob-num js-line-number" data-line-number="187"></td>
+        <td id="LC187" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            a.put([&quot;mined_lower&quot;,BLOCKCHAIN])</span></td>
+      </tr>
+      <tr>
+        <td id="L188" class="blob-num js-line-number" data-line-number="188"></td>
+        <td id="LC188" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            requests.get(&quot;http://&quot; + MINER_NODE_URL + &quot;:&quot; + str(PORT) + &quot;/blocks?update=&quot; + user.public_key)</span></td>
+      </tr>
+      <tr>
+        <td id="L189" class="blob-num js-line-number" data-line-number="189"></td>
+        <td id="LC189" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L190" class="blob-num js-line-number" data-line-number="190"></td>
+        <td id="LC190" class="blob-code blob-code-inner js-file-line"><span class="pl-s">            for node in PEER_NODES:</span></td>
+      </tr>
+      <tr>
+        <td id="L191" class="blob-num js-line-number" data-line-number="191"></td>
+        <td id="LC191" class="blob-code blob-code-inner js-file-line"><span class="pl-s">                url = &quot;http://&quot; + node + &quot;:&quot; + str(PORT) + &quot;/block&quot;</span></td>
+      </tr>
+      <tr>
+        <td id="L192" class="blob-num js-line-number" data-line-number="192"></td>
+        <td id="LC192" class="blob-code blob-code-inner js-file-line"><span class="pl-s">                headers = {&quot;Content-Type&quot;: &quot;application/json&quot;}</span></td>
+      </tr>
+      <tr>
+        <td id="L193" class="blob-num js-line-number" data-line-number="193"></td>
+        <td id="LC193" class="blob-code blob-code-inner js-file-line"><span class="pl-s">                data = mined_block.exportjson();</span></td>
+      </tr>
+      <tr>
+        <td id="L194" class="blob-num js-line-number" data-line-number="194"></td>
+        <td id="LC194" class="blob-code blob-code-inner js-file-line"><span class="pl-s">                requests.post(url,json = data, headers = headers)</span></td>
+      </tr>
+      <tr>
+        <td id="L195" class="blob-num js-line-number" data-line-number="195"></td>
+        <td id="LC195" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L196" class="blob-num js-line-number" data-line-number="196"></td>
+        <td id="LC196" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L197" class="blob-num js-line-number" data-line-number="197"></td>
+        <td id="LC197" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L198" class="blob-num js-line-number" data-line-number="198"></td>
+        <td id="LC198" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L199" class="blob-num js-line-number" data-line-number="199"></td>
+        <td id="LC199" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L200" class="blob-num js-line-number" data-line-number="200"></td>
+        <td id="LC200" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L201" class="blob-num js-line-number" data-line-number="201"></td>
+        <td id="LC201" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L202" class="blob-num js-line-number" data-line-number="202"></td>
+        <td id="LC202" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L203" class="blob-num js-line-number" data-line-number="203"></td>
+        <td id="LC203" class="blob-code blob-code-inner js-file-line"><span class="pl-s"></span></td>
+      </tr>
+      <tr>
+        <td id="L204" class="blob-num js-line-number" data-line-number="204"></td>
+        <td id="LC204" class="blob-code blob-code-inner js-file-line"><span class="pl-s"><span class="pl-pds">&#39;&#39;&#39;</span></span></td>
+      </tr>
+      <tr>
+        <td id="L205" class="blob-num js-line-number" data-line-number="205"></td>
+        <td id="LC205" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L206" class="blob-num js-line-number" data-line-number="206"></td>
+        <td id="LC206" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L207" class="blob-num js-line-number" data-line-number="207"></td>
+        <td id="LC207" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L208" class="blob-num js-line-number" data-line-number="208"></td>
+        <td id="LC208" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L209" class="blob-num js-line-number" data-line-number="209"></td>
+        <td id="LC209" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
 </table>
 
@@ -1282,7 +1550,7 @@
       <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy link">Copy link</clipboard-copy></li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/HourGlss/HourCrypto/blame/f1061f24d627f6770985a24877e68a01a9da0aca/Mining/Wallet.py">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/HourGlss/HourCrypto/blame/f1061f24d627f6770985a24877e68a01a9da0aca/Backup/Mining.py">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/HourGlss/HourCrypto/issues/new">Open new issue</a></li>
       </ul>
     </details-menu>
@@ -1317,7 +1585,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2018 <span title="0.21084s from unicorn-569445c9b6-v49rh">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2018 <span title="0.28548s from unicorn-3249217539-kdxf8">GitHub</span>, Inc.</li>
         <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>

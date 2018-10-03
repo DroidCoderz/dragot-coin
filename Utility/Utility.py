@@ -29,7 +29,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>HourCrypto/Variables.py at master · HourGlss/HourCrypto</title>
+  <title>HourCrypto/Utility.py at master · HourGlss/HourCrypto</title>
     <meta name="description" content="a Re-design of SimpleCoin. Contribute to HourGlss/HourCrypto development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -39,10 +39,10 @@
     <meta property="og:image" content="https://avatars2.githubusercontent.com/u/1668760?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="HourGlss/HourCrypto" /><meta property="og:url" content="https://github.com/HourGlss/HourCrypto" /><meta property="og:description" content="a Re-design of SimpleCoin. Contribute to HourGlss/HourCrypto development by creating an account on GitHub." />
 
   <link rel="assets" href="https://assets-cdn.github.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzE5MjE0NTEzOmM2ZTVhMjg5MDE0ZDMzNGEwYTZlNDljODc4MzEyZmY3ZWE4ZGJlM2Y2YThiNTkxOThhZmIwN2Q5NDk0NTgyNTU=--506c7d799bc53025af85b8075e0ea421dd9958b3">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzE5MjE0NTEzOmFjYTk0YmQ0YjkxYTNhZDZlNmMzYTZhMGQ3YzUwNWNmZmEyMWY0ZjllZWZmNzVlNDhiNDVhYjg1ZmMzYWU5YjM=--439ad1cfaa5aef863c99f0eab7d11854b0e511ed">
   <meta name="pjax-timeout" content="1000">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="E10F:3481:1DA950F:32E3788:5BB4E38E" data-pjax-transient>
+  <meta name="request-id" content="E10F:3481:1DA6112:32DEA5D:5BB4E31B" data-pjax-transient>
 
 
   
@@ -53,7 +53,7 @@
     <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
 
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="E10F:3481:1DA950F:32E3788:5BB4E38E" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="4502975" /><meta name="octolytics-actor-login" content="GitHubDroid" /><meta name="octolytics-actor-hash" content="4e6422d58b4e373ca114787556da4a5401072a52a35350b9fc65ff50ee2d0417" />
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="E10F:3481:1DA6112:32DEA5D:5BB4E31B" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="4502975" /><meta name="octolytics-actor-login" content="GitHubDroid" /><meta name="octolytics-actor-hash" content="4e6422d58b4e373ca114787556da4a5401072a52a35350b9fc65ff50ee2d0417" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -72,7 +72,7 @@
     <meta name="user-login" content="GitHubDroid">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="ZmVkNmQ4Y2EyODU3M2VkMjY0YmYxOTBlMmU5YjMyMGZlMDQ0NTVmYWEzMDcyNzNhZTU2NjU4NWZiYTQ2ODhlN3x7InJlbW90ZV9hZGRyZXNzIjoiMTY3LjIwNi4yMjkuMTI5IiwicmVxdWVzdF9pZCI6IkUxMEY6MzQ4MToxREE5NTBGOjMyRTM3ODg6NUJCNEUzOEUiLCJ0aW1lc3RhbXAiOjE1Mzg1ODEzOTYsImhvc3QiOiJnaXRodWIuY29tIn0=">
+    <meta name="js-proxy-site-detection-payload" content="ZjZiODhjMzIxZDUwNGFlNjM0MzMyOGE0NDEyOTRmMmNlZjE1YmM5ZmYwMjE5ODhhNmZhMzQzMjk5YjIxMzVhNHx7InJlbW90ZV9hZGRyZXNzIjoiMTY3LjIwNi4yMjkuMTI5IiwicmVxdWVzdF9pZCI6IkUxMEY6MzQ4MToxREE2MTEyOjMyREVBNUQ6NUJCNEUzMUIiLCJ0aW1lc3RhbXAiOjE1Mzg1ODEyODAsImhvc3QiOiJnaXRodWIuY29tIn0=">
 
     <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,MARKETPLACE_RETARGETING,COLLAPSE_REPEATED_COMMENTS">
 
@@ -88,7 +88,7 @@
   <meta name="octolytics-dimension-user_id" content="1668760" /><meta name="octolytics-dimension-user_login" content="HourGlss" /><meta name="octolytics-dimension-repository_id" content="149007287" /><meta name="octolytics-dimension-repository_nwo" content="HourGlss/HourCrypto" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="149007287" /><meta name="octolytics-dimension-repository_network_root_nwo" content="HourGlss/HourCrypto" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
 
 
-    <link rel="canonical" href="https://github.com/HourGlss/HourCrypto/blob/master/Mining/Variables.py" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/HourGlss/HourCrypto/blob/master/Utilities/Utility.py" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -157,7 +157,7 @@
           autocapitalize="off"
           aria-autocomplete="list"
           aria-controls="jump-to-results"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=wNh/H6GVQt26f5wcGjhc7mNR3uhfRs/OWk6crjOJmo6FPdm1ATpH7/qsOAucNooAZr7Pz+2eAk4xEByasycuUA=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=8RjmgNzOeKDxFzsLm9Y/MLLHbSIeu+21mACWomPf3Y60/UAqfGF9krHEnxwd2Onetyh8BaxjIDXzXhaW43FpUA=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -310,7 +310,7 @@
           <li><a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a></li>
           <li><a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a></li>
           <li>
-            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="NO7qh0GoCBXgc+OsMhLCU1kFBK4fT6kIXpa+QSXrfSzoS/reIzT1XUmMTi1TMuE0czVTKpIWjgNVWsLufDEF/g==" />
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Dx29v3yIe1RBhY8+ubDX0LvZYRscqWjJerDXC5X6U5TTuK3mHhSGHOh6Ir/YkPS3kek2n5HwT8JxfKukzCArRg==" />
               <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
                 Sign out
               </button>
@@ -323,7 +323,7 @@
 
 
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="hhaU+I4fi5jvGTD+mBAjzKpOAHGe2NcsaJF/OiSYueNas4Sh7IN20EbmnX/5MACrgH5X9ROB8CdjXQOVfULBMQ==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="55c0mJZsMY8v3PwsMsGwDcnXGl2GZgQSzFo4BoBkLhA7MiTB9PDMx4YjUa1T4ZNq4+dN2Qs/IxnHlkSp2b5Wwg==" />
           <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
             Sign out
           </button>
@@ -362,7 +362,7 @@
 
       <ul class="pagehead-actions">
   <li>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="d7sttUofcD9EnKvPCalLmdPkXzlsl+uj17dmXx2/8eKXpLmu0JApAqrPPmgpVWOOH2HA+Pvzno3aVIZIgwaI2Q==" />      <input type="hidden" name="repository_id" id="repository_id" value="149007287" class="form-control" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="wMFq/TnHh+ExjMCxvKxKsv6J5mMxhtMAose+Q7k/LrYg3v7mo0je3N/fVRacUGKlMgx5oqbipi6vJF5UJ4ZXjQ==" />      <input type="hidden" name="repository_id" id="repository_id" value="149007287" class="form-control" />
 
       <details class="details-reset details-overlay select-menu float-left">
         <summary class="btn btn-sm btn-with-count select-menu-button" data-ga-click="Repository, click Watch settings, action:blob#show">
@@ -425,7 +425,7 @@
   <li>
     
   <div class="js-toggler-container js-social-container starring-container ">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/HourGlss/HourCrypto/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="SNXn+DH/fvSlIT0WdmmV0l2R5nrHW8ydz6Gn0biLkoRfQs41Jbke95kTkpKIlznsXcj1yJgnqTyhvjfJ08cVNw==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/HourGlss/HourCrypto/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="kYIp0FTvLGWNSHiX7qQcZDrLCSiDjGPRZ0gdh469ViGGFQAdQKlMZrF61xMQWrBaOpIamtzwBnAJV42f5fHRkg==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -440,7 +440,7 @@
           0
         </a>
 </form>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/HourGlss/HourCrypto/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="xfQSsI/QDUYFN9Qj9t8ZZ7l6HJF9m5LyZIqiLRKhKXK25OA1np5FxUVLA997lbdMVfqNOJC3/mYt4UHqH+R5nA==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/HourGlss/HourCrypto/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="TDomeTHsVDtNxqDpF9H0JCzFI9HVRdURPlC8I5vqleo/KtT8IKIcuA26dxWam1oPwEWyeDhpuYV3O1/klq/FBA==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -556,9 +556,9 @@
     
 
   
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/HourGlss/HourCrypto/blob/f1061f24d627f6770985a24877e68a01a9da0aca/Mining/Variables.py">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/HourGlss/HourCrypto/blob/f1061f24d627f6770985a24877e68a01a9da0aca/Utilities/Utility.py">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v21:8f51f1c2921985cda80a229c0d090d07 -->
+    <!-- blob contrib key: blob_contributors:v21:664544547a7a41f9f5ad0fbe5540d731 -->
 
     
 
@@ -602,7 +602,7 @@
 
 
             <a class="select-menu-item js-navigation-item js-navigation-open selected"
-               href="/HourGlss/HourCrypto/blob/master/Mining/Variables.py"
+               href="/HourGlss/HourCrypto/blob/master/Utilities/Utility.py"
                data-name="master"
                data-skip-pjax="true"
                rel="nofollow">
@@ -641,12 +641,12 @@
         </clipboard-copy>
       </div>
       <div id="blob-path" class="breadcrumb">
-        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto"><span>HourCrypto</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto/tree/master/Mining"><span>Mining</span></a></span><span class="separator">/</span><strong class="final-path">Variables.py</strong>
+        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto"><span>HourCrypto</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto/tree/master/Utilities"><span>Utilities</span></a></span><span class="separator">/</span><strong class="final-path">Utility.py</strong>
       </div>
     </div>
 
 
-    <include-fragment src="/HourGlss/HourCrypto/contributors/master/Mining/Variables.py" class="commit-tease commit-loader">
+    <include-fragment src="/HourGlss/HourCrypto/contributors/master/Utilities/Utility.py" class="commit-tease commit-loader">
       <div>
         Fetching contributors&hellip;
       </div>
@@ -663,25 +663,25 @@
   <div class="file-actions">
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/raw/master/Mining/Variables.py">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/HourGlss/HourCrypto/blame/master/Mining/Variables.py">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/commits/master/Mining/Variables.py">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/raw/master/Utilities/Utility.py">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/HourGlss/HourCrypto/blame/master/Utilities/Utility.py">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/commits/master/Utilities/Utility.py">History</a>
     </div>
 
         <a class="btn-octicon tooltipped tooltipped-nw"
-           href="github-windows://openRepo/https://github.com/HourGlss/HourCrypto?branch=master&amp;filepath=Mining%2FVariables.py"
+           href="github-windows://openRepo/https://github.com/HourGlss/HourCrypto?branch=master&amp;filepath=Utilities%2FUtility.py"
            aria-label="Open this file in GitHub Desktop"
            data-ga-click="Repository, open with desktop, type:windows">
             <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
         </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/HourGlss/HourCrypto/edit/master/Mining/Variables.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="DAXCKlcBJcrHkDe1qUlpXmprL/VFpC9xd7CDOtVs9kaAZCNoB2X61qliAPK+2QwEK9npzBpWQy1zTV7ma3VOUg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/HourGlss/HourCrypto/edit/master/Utilities/Utility.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="MIkvrqsW4rqHo3OuA2Jo/Zdr/MSB/5HbMNCP54ezIUd5HCn6foaGOh7U2Hymjp9AGfmj0iJGhAnne2l4EazFzw==" />
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Edit the file in your fork of this project" data-hotkey="e" data-disable-with>
               <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
             </button>
 </form>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/HourGlss/HourCrypto/delete/master/Mining/Variables.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="4Ezgir7Usbmt6EJaXPtfxoozvnq03GJ/ReNwHHQsLMcswBENuNSS533XGlxi0bLM0ICApTeVcgIFfteUzjCBUg==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/HourGlss/HourCrypto/delete/master/Utilities/Utility.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="5/D2I2vMzOp7PUI5gD0YU9fIPZJdbR6/pwXJTe26gMuUO8tbs8P4xCp/qLbb/Az4KnlwodeMnDkpMGybmFIaYA==" />
           <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
             aria-label="Delete the file in your fork of this project" data-disable-with>
             <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
@@ -689,9 +689,9 @@
 </form>  </div>
 
   <div class="file-info">
-      11 lines (10 sloc)
+      126 lines (110 sloc)
       <span class="file-info-divider"></span>
-    356 Bytes
+    4.27 KB
   </div>
 </div>
 
@@ -701,48 +701,523 @@
       <table class="highlight tab-size js-file-line-container" data-tab-size="8">
       <tr>
         <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
-        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> logging</td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> base64</td>
       </tr>
       <tr>
         <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
-        <td id="LC2" class="blob-code blob-code-inner js-file-line">logging.info(<span class="pl-s"><span class="pl-pds">&quot;</span>Loading Variables<span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> hashlib</td>
       </tr>
       <tr>
         <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
-        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">WORK</span> <span class="pl-k">=</span> <span class="pl-c1">18</span></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> secrets</td>
       </tr>
       <tr>
         <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> string</td>
       </tr>
       <tr>
         <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">PEER_NODES</span> <span class="pl-k">=</span> []</td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> Mining.Variables <span class="pl-k">as</span> variables</td>
       </tr>
       <tr>
         <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">MINER_NODE_URL</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>127.0.0.1<span class="pl-pds">&quot;</span></span></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> inspect</td>
       </tr>
       <tr>
         <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">PORT</span> <span class="pl-k">=</span> <span class="pl-c1">5000</span></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> time</td>
       </tr>
       <tr>
         <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
-        <td id="LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">BLOCKCHAIN</span> <span class="pl-k">=</span> []</td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> Mining.Block <span class="pl-k">import</span> Block</td>
       </tr>
       <tr>
         <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">PENDING_TRANSACTIONS</span> <span class="pl-k">=</span> []</td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> ecdsa <span class="pl-k">import</span> ecdsa</td>
       </tr>
       <tr>
         <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line">logging.debug(<span class="pl-s"><span class="pl-pds">&quot;</span>work: <span class="pl-c1">{}</span> peers:<span class="pl-c1">{}</span> node_url:<span class="pl-c1">{}</span> port: <span class="pl-c1">{}</span> blockchain: <span class="pl-c1">{}</span> pending: <span class="pl-c1">{}</span><span class="pl-pds">&quot;</span></span>.format(<span class="pl-c1">WORK</span>,<span class="pl-c1">PEER_NODES</span>,<span class="pl-c1">MINER_NODE_URL</span>,<span class="pl-c1">PORT</span>,<span class="pl-c1">BLOCKCHAIN</span>,<span class="pl-c1">PENDING_TRANSACTIONS</span>))</td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> logging</td>
       </tr>
       <tr>
         <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line">logging.info(<span class="pl-s"><span class="pl-pds">&quot;</span>Done loading Variables<span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">create_genesis_block</span>():</td>
+      </tr>
+      <tr>
+        <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">    func <span class="pl-k">=</span> inspect.currentframe().f_back.f_code</td>
+      </tr>
+      <tr>
+        <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line">    logging.info(<span class="pl-s"><span class="pl-pds">&quot;</span>Creating a genesis block<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line">    logging.debug(<span class="pl-s"><span class="pl-pds">&quot;</span>Work:<span class="pl-c1">{}</span><span class="pl-pds">&quot;</span></span>.format(variables.<span class="pl-c1">WORK</span>))</td>
+      </tr>
+      <tr>
+        <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line">    work_ez <span class="pl-k">=</span> <span class="pl-c1">int</span>(variables.<span class="pl-c1">WORK</span> <span class="pl-k">/</span> <span class="pl-c1">4</span>) <span class="pl-k">+</span> <span class="pl-c1">1</span></td>
+      </tr>
+      <tr>
+        <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line">    proof_of_work <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>0<span class="pl-pds">&quot;</span></span> <span class="pl-k">*</span> work_ez</td>
+      </tr>
+      <tr>
+        <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line">    pad <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>1337<span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> i <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">4</span>, <span class="pl-c1">64</span>):</td>
+      </tr>
+      <tr>
+        <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line">        proof_of_work <span class="pl-k">+=</span> pad[i <span class="pl-k">%</span> <span class="pl-c1">len</span>(pad)]</td>
+      </tr>
+      <tr>
+        <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line">    b <span class="pl-k">=</span> Block(<span class="pl-c1">0</span>, time.time(), proof_of_work, <span class="pl-s"><span class="pl-pds">&quot;</span>e<span class="pl-pds">&quot;</span></span>, [],</td>
+      </tr>
+      <tr>
+        <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line">              <span class="pl-s"><span class="pl-pds">&quot;</span>0<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line">    b.data <span class="pl-k">=</span> [{<span class="pl-s"><span class="pl-pds">&quot;</span>FROM<span class="pl-pds">&quot;</span></span>: <span class="pl-c1">0</span>, <span class="pl-s"><span class="pl-pds">&quot;</span>TO<span class="pl-pds">&quot;</span></span>: <span class="pl-c1">0</span>, <span class="pl-s"><span class="pl-pds">&quot;</span>AMOUNT<span class="pl-pds">&quot;</span></span>: <span class="pl-c1">0</span>}]</td>
+      </tr>
+      <tr>
+        <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line">    logging.info(<span class="pl-s"><span class="pl-pds">&quot;</span>Returning block: <span class="pl-c1">{}</span><span class="pl-pds">&quot;</span></span>.format(b))</td>
+      </tr>
+      <tr>
+        <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> b</td>
+      </tr>
+      <tr>
+        <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">buildmessage</span>(<span class="pl-smi">origin</span>, <span class="pl-smi">data</span>):</td>
+      </tr>
+      <tr>
+        <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line">    func <span class="pl-k">=</span> inspect.currentframe().f_back.f_code</td>
+      </tr>
+      <tr>
+        <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line">    logging.debug(<span class="pl-s"><span class="pl-pds">&quot;</span>type: <span class="pl-c1">{}</span> data:<span class="pl-c1">{}</span><span class="pl-pds">&quot;</span></span>.format(origin, data))</td>
+      </tr>
+      <tr>
+        <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> (origin, data)</td>
+      </tr>
+      <tr>
+        <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="LC32" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">buildpow</span>(<span class="pl-smi">index</span>,<span class="pl-smi">timestamp</span>,<span class="pl-smi">effort</span>,<span class="pl-smi">data</span>,<span class="pl-smi">previous_hash</span>):</td>
+      </tr>
+      <tr>
+        <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="LC34" class="blob-code blob-code-inner js-file-line">    m <span class="pl-k">=</span> hashlib.sha256()</td>
+      </tr>
+      <tr>
+        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="LC35" class="blob-code blob-code-inner js-file-line">    m.update((<span class="pl-c1">str</span>(index) <span class="pl-k">+</span> <span class="pl-c1">str</span>(timestamp) <span class="pl-k">+</span> <span class="pl-c1">str</span>(effort) <span class="pl-k">+</span> <span class="pl-c1">str</span>(data) <span class="pl-k">+</span> <span class="pl-c1">str</span>(previous_hash)).encode(<span class="pl-s"><span class="pl-pds">&#39;</span>utf-8<span class="pl-pds">&#39;</span></span>))</td>
+      </tr>
+      <tr>
+        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="LC36" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> m</td>
+      </tr>
+      <tr>
+        <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="LC37" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="LC38" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">validate</span>(<span class="pl-smi">block</span>):</td>
+      </tr>
+      <tr>
+        <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="LC39" class="blob-code blob-code-inner js-file-line">    func <span class="pl-k">=</span> inspect.currentframe().f_back.f_code</td>
+      </tr>
+      <tr>
+        <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="LC40" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="LC41" class="blob-code blob-code-inner js-file-line">    logging.info(<span class="pl-s"><span class="pl-pds">&quot;</span>Validating block<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="LC42" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> block.index <span class="pl-k">==</span> <span class="pl-c1">0</span>:</td>
+      </tr>
+      <tr>
+        <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="LC43" class="blob-code blob-code-inner js-file-line">        logging.debug(<span class="pl-s"><span class="pl-pds">&quot;</span>Block validated good<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="LC44" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">True</span></td>
+      </tr>
+      <tr>
+        <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
+        <td id="LC45" class="blob-code blob-code-inner js-file-line">    generaged_proof_of_work <span class="pl-k">=</span> buildpow(block.index,block.timestamp,block.effort,block.data,block.previous_hash)</td>
+      </tr>
+      <tr>
+        <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
+        <td id="LC46" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> block.proof_of_work <span class="pl-k">==</span> generaged_proof_of_work.hexdigest():</td>
+      </tr>
+      <tr>
+        <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
+        <td id="LC47" class="blob-code blob-code-inner js-file-line">        logging.debug(<span class="pl-s"><span class="pl-pds">&quot;</span>Block validated good<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
+        <td id="LC48" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">True</span></td>
+      </tr>
+      <tr>
+        <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
+        <td id="LC49" class="blob-code blob-code-inner js-file-line">    logging.warning(<span class="pl-s"><span class="pl-pds">&quot;</span>powhexdig:<span class="pl-c1">{}</span> should have received: <span class="pl-c1">{}</span><span class="pl-pds">&quot;</span></span>.format(generaged_proof_of_work.hexdigest(),block.proof_of_work))</td>
+      </tr>
+      <tr>
+        <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
+        <td id="LC50" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> <span class="pl-c1">False</span></td>
+      </tr>
+      <tr>
+        <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
+        <td id="LC51" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
+        <td id="LC52" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
+        <td id="LC53" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">random_str</span>():</td>
+      </tr>
+      <tr>
+        <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
+        <td id="LC54" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span> Generate a random size string</span></td>
+      </tr>
+      <tr>
+        <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
+        <td id="LC55" class="blob-code blob-code-inner js-file-line">    rand_str <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span></td>
+      </tr>
+      <tr>
+        <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
+        <td id="LC56" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> i <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">0</span>, <span class="pl-c1">1</span> <span class="pl-k">+</span> secrets.randbelow(<span class="pl-c1">25</span>)):</td>
+      </tr>
+      <tr>
+        <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
+        <td id="LC57" class="blob-code blob-code-inner js-file-line">        rand_str <span class="pl-k">+=</span> string.ascii_lowercase[secrets.randbelow(<span class="pl-c1">26</span>)]  <span class="pl-c"><span class="pl-c">#</span> each char is a random downcase letter [a-z]</span></td>
+      </tr>
+      <tr>
+        <td id="L58" class="blob-num js-line-number" data-line-number="58"></td>
+        <td id="LC58" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> rand_str</td>
+      </tr>
+      <tr>
+        <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
+        <td id="LC59" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
+        <td id="LC60" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">genhash</span>(<span class="pl-smi">index</span>,<span class="pl-smi">timestamp</span>,<span class="pl-smi">data</span>,<span class="pl-smi">last_hash</span>):</td>
+      </tr>
+      <tr>
+        <td id="L61" class="blob-num js-line-number" data-line-number="61"></td>
+        <td id="LC61" class="blob-code blob-code-inner js-file-line">    effort <span class="pl-k">=</span> random_str()</td>
+      </tr>
+      <tr>
+        <td id="L62" class="blob-num js-line-number" data-line-number="62"></td>
+        <td id="LC62" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> effort, buildpow(index,timestamp,effort,data,last_hash)</td>
+      </tr>
+      <tr>
+        <td id="L63" class="blob-num js-line-number" data-line-number="63"></td>
+        <td id="LC63" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L64" class="blob-num js-line-number" data-line-number="64"></td>
+        <td id="LC64" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">leadingzeroes</span>(<span class="pl-smi">digest</span>):</td>
+      </tr>
+      <tr>
+        <td id="L65" class="blob-num js-line-number" data-line-number="65"></td>
+        <td id="LC65" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span><span class="pl-k">TODO</span> I&#39;m almost positive there&#39;s a faster way to do this</span></td>
+      </tr>
+      <tr>
+        <td id="L66" class="blob-num js-line-number" data-line-number="66"></td>
+        <td id="LC66" class="blob-code blob-code-inner js-file-line">    n <span class="pl-k">=</span> <span class="pl-c1">0</span></td>
+      </tr>
+      <tr>
+        <td id="L67" class="blob-num js-line-number" data-line-number="67"></td>
+        <td id="LC67" class="blob-code blob-code-inner js-file-line">    result <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span>.join(<span class="pl-c1">format</span>(x, <span class="pl-s"><span class="pl-pds">&#39;</span>08b<span class="pl-pds">&#39;</span></span>) <span class="pl-k">for</span> x <span class="pl-k">in</span> <span class="pl-c1">bytearray</span>(digest))</td>
+      </tr>
+      <tr>
+        <td id="L68" class="blob-num js-line-number" data-line-number="68"></td>
+        <td id="LC68" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> c <span class="pl-k">in</span> result:</td>
+      </tr>
+      <tr>
+        <td id="L69" class="blob-num js-line-number" data-line-number="69"></td>
+        <td id="LC69" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> c <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&#39;</span>0<span class="pl-pds">&#39;</span></span>:</td>
+      </tr>
+      <tr>
+        <td id="L70" class="blob-num js-line-number" data-line-number="70"></td>
+        <td id="LC70" class="blob-code blob-code-inner js-file-line">            n <span class="pl-k">+=</span> <span class="pl-c1">1</span></td>
+      </tr>
+      <tr>
+        <td id="L71" class="blob-num js-line-number" data-line-number="71"></td>
+        <td id="LC71" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">else</span>:</td>
+      </tr>
+      <tr>
+        <td id="L72" class="blob-num js-line-number" data-line-number="72"></td>
+        <td id="LC72" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">break</span></td>
+      </tr>
+      <tr>
+        <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
+        <td id="LC73" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> n</td>
+      </tr>
+      <tr>
+        <td id="L74" class="blob-num js-line-number" data-line-number="74"></td>
+        <td id="LC74" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L75" class="blob-num js-line-number" data-line-number="75"></td>
+        <td id="LC75" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">createHexdigest</span>(<span class="pl-smi">s</span>):</td>
+      </tr>
+      <tr>
+        <td id="L76" class="blob-num js-line-number" data-line-number="76"></td>
+        <td id="LC76" class="blob-code blob-code-inner js-file-line">    m <span class="pl-k">=</span> hashlib.sha256()</td>
+      </tr>
+      <tr>
+        <td id="L77" class="blob-num js-line-number" data-line-number="77"></td>
+        <td id="LC77" class="blob-code blob-code-inner js-file-line">    m.update(s.encode(<span class="pl-s"><span class="pl-pds">&#39;</span>utf-8<span class="pl-pds">&#39;</span></span>))</td>
+      </tr>
+      <tr>
+        <td id="L78" class="blob-num js-line-number" data-line-number="78"></td>
+        <td id="LC78" class="blob-code blob-code-inner js-file-line">    secret_key <span class="pl-k">=</span> m.hexdigest()</td>
+      </tr>
+      <tr>
+        <td id="L79" class="blob-num js-line-number" data-line-number="79"></td>
+        <td id="LC79" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> secret_key</td>
+      </tr>
+      <tr>
+        <td id="L80" class="blob-num js-line-number" data-line-number="80"></td>
+        <td id="LC80" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L81" class="blob-num js-line-number" data-line-number="81"></td>
+        <td id="LC81" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">validate_blockchain</span>(<span class="pl-smi">blockchain</span>):</td>
+      </tr>
+      <tr>
+        <td id="L82" class="blob-num js-line-number" data-line-number="82"></td>
+        <td id="LC82" class="blob-code blob-code-inner js-file-line">    func <span class="pl-k">=</span> inspect.currentframe().f_back.f_code</td>
+      </tr>
+      <tr>
+        <td id="L83" class="blob-num js-line-number" data-line-number="83"></td>
+        <td id="LC83" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L84" class="blob-num js-line-number" data-line-number="84"></td>
+        <td id="LC84" class="blob-code blob-code-inner js-file-line">    logging.info(<span class="pl-s"><span class="pl-pds">&quot;</span>Validating blockchain<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L85" class="blob-num js-line-number" data-line-number="85"></td>
+        <td id="LC85" class="blob-code blob-code-inner js-file-line">    previous <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="L86" class="blob-num js-line-number" data-line-number="86"></td>
+        <td id="LC86" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> i <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">0</span>,<span class="pl-c1">len</span>(blockchain)<span class="pl-k">-</span><span class="pl-c1">1</span>):</td>
+      </tr>
+      <tr>
+        <td id="L87" class="blob-num js-line-number" data-line-number="87"></td>
+        <td id="LC87" class="blob-code blob-code-inner js-file-line">        block <span class="pl-k">=</span> blockchain[i]</td>
+      </tr>
+      <tr>
+        <td id="L88" class="blob-num js-line-number" data-line-number="88"></td>
+        <td id="LC88" class="blob-code blob-code-inner js-file-line">        logging.debug(<span class="pl-s"><span class="pl-pds">&quot;</span>Evaluating block: <span class="pl-c1">{}</span><span class="pl-pds">&quot;</span></span>.format(block))</td>
+      </tr>
+      <tr>
+        <td id="L89" class="blob-num js-line-number" data-line-number="89"></td>
+        <td id="LC89" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> block.index <span class="pl-k">==</span> <span class="pl-c1">0</span>:</td>
+      </tr>
+      <tr>
+        <td id="L90" class="blob-num js-line-number" data-line-number="90"></td>
+        <td id="LC90" class="blob-code blob-code-inner js-file-line">            logging.debug(<span class="pl-s"><span class="pl-pds">&quot;</span>Genesis block found<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L91" class="blob-num js-line-number" data-line-number="91"></td>
+        <td id="LC91" class="blob-code blob-code-inner js-file-line">            previous <span class="pl-k">=</span> block.hash</td>
+      </tr>
+      <tr>
+        <td id="L92" class="blob-num js-line-number" data-line-number="92"></td>
+        <td id="LC92" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">continue</span></td>
+      </tr>
+      <tr>
+        <td id="L93" class="blob-num js-line-number" data-line-number="93"></td>
+        <td id="LC93" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">else</span>:</td>
+      </tr>
+      <tr>
+        <td id="L94" class="blob-num js-line-number" data-line-number="94"></td>
+        <td id="LC94" class="blob-code blob-code-inner js-file-line">            previous <span class="pl-k">=</span> blockchain[i<span class="pl-k">-</span><span class="pl-c1">1</span>].hash</td>
+      </tr>
+      <tr>
+        <td id="L95" class="blob-num js-line-number" data-line-number="95"></td>
+        <td id="LC95" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> <span class="pl-k">not</span> validate(block):</td>
+      </tr>
+      <tr>
+        <td id="L96" class="blob-num js-line-number" data-line-number="96"></td>
+        <td id="LC96" class="blob-code blob-code-inner js-file-line">            logging.warning(<span class="pl-s"><span class="pl-pds">&quot;</span>Did not validate blockchain block did not validate<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L97" class="blob-num js-line-number" data-line-number="97"></td>
+        <td id="LC97" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L98" class="blob-num js-line-number" data-line-number="98"></td>
+        <td id="LC98" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">return</span> <span class="pl-c1">False</span></td>
+      </tr>
+      <tr>
+        <td id="L99" class="blob-num js-line-number" data-line-number="99"></td>
+        <td id="LC99" class="blob-code blob-code-inner js-file-line">        data <span class="pl-k">=</span> block.data</td>
+      </tr>
+      <tr>
+        <td id="L100" class="blob-num js-line-number" data-line-number="100"></td>
+        <td id="LC100" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">for</span> transaction <span class="pl-k">in</span> data:</td>
+      </tr>
+      <tr>
+        <td id="L101" class="blob-num js-line-number" data-line-number="101"></td>
+        <td id="LC101" class="blob-code blob-code-inner js-file-line">            logging.debug(<span class="pl-s"><span class="pl-pds">&quot;</span>trans: <span class="pl-c1">{}</span><span class="pl-pds">&quot;</span></span>.format(transaction))</td>
+      </tr>
+      <tr>
+        <td id="L102" class="blob-num js-line-number" data-line-number="102"></td>
+        <td id="LC102" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">if</span> transaction[<span class="pl-s"><span class="pl-pds">&#39;</span>from<span class="pl-pds">&#39;</span></span>] <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&quot;</span>network<span class="pl-pds">&quot;</span></span> <span class="pl-k">and</span> transaction[<span class="pl-s"><span class="pl-pds">&#39;</span>amount<span class="pl-pds">&#39;</span></span>] <span class="pl-k">!=</span> <span class="pl-c1">1</span>:</td>
+      </tr>
+      <tr>
+        <td id="L103" class="blob-num js-line-number" data-line-number="103"></td>
+        <td id="LC103" class="blob-code blob-code-inner js-file-line">                logging.warning(<span class="pl-s"><span class="pl-pds">&quot;</span>Did not validate blockchain mining wrong<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L104" class="blob-num js-line-number" data-line-number="104"></td>
+        <td id="LC104" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L105" class="blob-num js-line-number" data-line-number="105"></td>
+        <td id="LC105" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">return</span> <span class="pl-c1">False</span></td>
+      </tr>
+      <tr>
+        <td id="L106" class="blob-num js-line-number" data-line-number="106"></td>
+        <td id="LC106" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> previous <span class="pl-k">!=</span> block.previous_hash:</td>
+      </tr>
+      <tr>
+        <td id="L107" class="blob-num js-line-number" data-line-number="107"></td>
+        <td id="LC107" class="blob-code blob-code-inner js-file-line">            logging.debug(<span class="pl-s"><span class="pl-pds">&quot;</span>previous hash didn&#39;t validate previous:<span class="pl-c1">{}</span> block.previous:<span class="pl-c1">{}</span><span class="pl-pds">&quot;</span></span>.format(previous,block.previous_hash))</td>
+      </tr>
+      <tr>
+        <td id="L108" class="blob-num js-line-number" data-line-number="108"></td>
+        <td id="LC108" class="blob-code blob-code-inner js-file-line">            logging.warning(<span class="pl-s"><span class="pl-pds">&quot;</span>Did not validate blockchain Previous hash incorrect<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L109" class="blob-num js-line-number" data-line-number="109"></td>
+        <td id="LC109" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">return</span> <span class="pl-c1">False</span></td>
+      </tr>
+      <tr>
+        <td id="L110" class="blob-num js-line-number" data-line-number="110"></td>
+        <td id="LC110" class="blob-code blob-code-inner js-file-line">    logging.info(<span class="pl-s"><span class="pl-pds">&quot;</span>Validated<span class="pl-pds">&quot;</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="L111" class="blob-num js-line-number" data-line-number="111"></td>
+        <td id="LC111" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> <span class="pl-c1">True</span></td>
+      </tr>
+      <tr>
+        <td id="L112" class="blob-num js-line-number" data-line-number="112"></td>
+        <td id="LC112" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L113" class="blob-num js-line-number" data-line-number="113"></td>
+        <td id="LC113" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">validate_signature</span>(<span class="pl-smi">public_key</span>, <span class="pl-smi">signature</span>, <span class="pl-smi">message</span>):</td>
+      </tr>
+      <tr>
+        <td id="L114" class="blob-num js-line-number" data-line-number="114"></td>
+        <td id="LC114" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span><span class="pl-k">TODO</span> I have never tested this</span></td>
+      </tr>
+      <tr>
+        <td id="L115" class="blob-num js-line-number" data-line-number="115"></td>
+        <td id="LC115" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">&quot;&quot;&quot;</span>Verifies if the signature is correct. This is used to prove</span></td>
+      </tr>
+      <tr>
+        <td id="L116" class="blob-num js-line-number" data-line-number="116"></td>
+        <td id="LC116" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    it&#39;s you (and not someone else) trying to do a transaction with your</span></td>
+      </tr>
+      <tr>
+        <td id="L117" class="blob-num js-line-number" data-line-number="117"></td>
+        <td id="LC117" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    address. Called when a user tries to submit a new transaction.</span></td>
+      </tr>
+      <tr>
+        <td id="L118" class="blob-num js-line-number" data-line-number="118"></td>
+        <td id="LC118" class="blob-code blob-code-inner js-file-line"><span class="pl-s">    <span class="pl-pds">&quot;&quot;&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="L119" class="blob-num js-line-number" data-line-number="119"></td>
+        <td id="LC119" class="blob-code blob-code-inner js-file-line">    public_key <span class="pl-k">=</span> (base64.b64decode(public_key)).hex()</td>
+      </tr>
+      <tr>
+        <td id="L120" class="blob-num js-line-number" data-line-number="120"></td>
+        <td id="LC120" class="blob-code blob-code-inner js-file-line">    signature <span class="pl-k">=</span> base64.b64decode(signature)</td>
+      </tr>
+      <tr>
+        <td id="L121" class="blob-num js-line-number" data-line-number="121"></td>
+        <td id="LC121" class="blob-code blob-code-inner js-file-line">    vk <span class="pl-k">=</span> ecdsa.VerifyingKey.from_string(<span class="pl-c1">bytes</span>.fromhex(public_key), <span class="pl-v">curve</span><span class="pl-k">=</span>ecdsa.SECP256k1)</td>
+      </tr>
+      <tr>
+        <td id="L122" class="blob-num js-line-number" data-line-number="122"></td>
+        <td id="LC122" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">#</span> Try changing into an if/else statement as except is too broad.</span></td>
+      </tr>
+      <tr>
+        <td id="L123" class="blob-num js-line-number" data-line-number="123"></td>
+        <td id="LC123" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">try</span>:</td>
+      </tr>
+      <tr>
+        <td id="L124" class="blob-num js-line-number" data-line-number="124"></td>
+        <td id="LC124" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> vk.verify(signature, message.encode())</td>
+      </tr>
+      <tr>
+        <td id="L125" class="blob-num js-line-number" data-line-number="125"></td>
+        <td id="LC125" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">except</span>:</td>
+      </tr>
+      <tr>
+        <td id="L126" class="blob-num js-line-number" data-line-number="126"></td>
+        <td id="LC126" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">False</span></td>
       </tr>
 </table>
 
@@ -754,7 +1229,7 @@
       <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy link">Copy link</clipboard-copy></li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/HourGlss/HourCrypto/blame/f1061f24d627f6770985a24877e68a01a9da0aca/Mining/Variables.py">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/HourGlss/HourCrypto/blame/f1061f24d627f6770985a24877e68a01a9da0aca/Utilities/Utility.py">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/HourGlss/HourCrypto/issues/new">Open new issue</a></li>
       </ul>
     </details-menu>
@@ -789,7 +1264,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2018 <span title="0.22666s from unicorn-3249217539-1q6jl">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2018 <span title="0.27603s from unicorn-3249217539-k2kbp">GitHub</span>, Inc.</li>
         <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>

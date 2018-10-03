@@ -29,7 +29,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>HourCrypto/Variables.py at master · HourGlss/HourCrypto</title>
+  <title>HourCrypto/User.py at master · HourGlss/HourCrypto</title>
     <meta name="description" content="a Re-design of SimpleCoin. Contribute to HourGlss/HourCrypto development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -39,10 +39,10 @@
     <meta property="og:image" content="https://avatars2.githubusercontent.com/u/1668760?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="HourGlss/HourCrypto" /><meta property="og:url" content="https://github.com/HourGlss/HourCrypto" /><meta property="og:description" content="a Re-design of SimpleCoin. Contribute to HourGlss/HourCrypto development by creating an account on GitHub." />
 
   <link rel="assets" href="https://assets-cdn.github.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzE5MjE0NTEzOmM2ZTVhMjg5MDE0ZDMzNGEwYTZlNDljODc4MzEyZmY3ZWE4ZGJlM2Y2YThiNTkxOThhZmIwN2Q5NDk0NTgyNTU=--506c7d799bc53025af85b8075e0ea421dd9958b3">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzE5MjE0NTEzOjAyMzRjNjkzNWQ5YzMzMWVjODYxMzk5ZjIxOTkyOTc3Yjc3NGM1Y2I3MTVkYTdkMWFjYjhhNGMwMTBiY2Q3MmM=--bc2b4ecc2ac1e11f947a9344316865a551a3fef0">
   <meta name="pjax-timeout" content="1000">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="E10F:3481:1DA950F:32E3788:5BB4E38E" data-pjax-transient>
+  <meta name="request-id" content="A8A3:3483:3558E48:58AB1CA:5BB4E302" data-pjax-transient>
 
 
   
@@ -53,7 +53,7 @@
     <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
 
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="E10F:3481:1DA950F:32E3788:5BB4E38E" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="4502975" /><meta name="octolytics-actor-login" content="GitHubDroid" /><meta name="octolytics-actor-hash" content="4e6422d58b4e373ca114787556da4a5401072a52a35350b9fc65ff50ee2d0417" />
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="A8A3:3483:3558E48:58AB1CA:5BB4E302" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="4502975" /><meta name="octolytics-actor-login" content="GitHubDroid" /><meta name="octolytics-actor-hash" content="4e6422d58b4e373ca114787556da4a5401072a52a35350b9fc65ff50ee2d0417" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -72,7 +72,7 @@
     <meta name="user-login" content="GitHubDroid">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="ZmVkNmQ4Y2EyODU3M2VkMjY0YmYxOTBlMmU5YjMyMGZlMDQ0NTVmYWEzMDcyNzNhZTU2NjU4NWZiYTQ2ODhlN3x7InJlbW90ZV9hZGRyZXNzIjoiMTY3LjIwNi4yMjkuMTI5IiwicmVxdWVzdF9pZCI6IkUxMEY6MzQ4MToxREE5NTBGOjMyRTM3ODg6NUJCNEUzOEUiLCJ0aW1lc3RhbXAiOjE1Mzg1ODEzOTYsImhvc3QiOiJnaXRodWIuY29tIn0=">
+    <meta name="js-proxy-site-detection-payload" content="NjIzMDRjMzVjYjA3MDYyY2NiYTcyMjViNWI0OTIxYjc0YTAxM2M1MzEzNzU3YjYzODdhMzdiN2E2NzJhMDU3YXx7InJlbW90ZV9hZGRyZXNzIjoiMTY3LjIwNi4yMjkuMTI5IiwicmVxdWVzdF9pZCI6IkE4QTM6MzQ4MzozNTU4RTQ4OjU4QUIxQ0E6NUJCNEUzMDIiLCJ0aW1lc3RhbXAiOjE1Mzg1ODEyNTQsImhvc3QiOiJnaXRodWIuY29tIn0=">
 
     <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,MARKETPLACE_RETARGETING,COLLAPSE_REPEATED_COMMENTS">
 
@@ -88,7 +88,7 @@
   <meta name="octolytics-dimension-user_id" content="1668760" /><meta name="octolytics-dimension-user_login" content="HourGlss" /><meta name="octolytics-dimension-repository_id" content="149007287" /><meta name="octolytics-dimension-repository_nwo" content="HourGlss/HourCrypto" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="149007287" /><meta name="octolytics-dimension-repository_network_root_nwo" content="HourGlss/HourCrypto" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
 
 
-    <link rel="canonical" href="https://github.com/HourGlss/HourCrypto/blob/master/Mining/Variables.py" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/HourGlss/HourCrypto/blob/master/User/User.py" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -157,7 +157,7 @@
           autocapitalize="off"
           aria-autocomplete="list"
           aria-controls="jump-to-results"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=wNh/H6GVQt26f5wcGjhc7mNR3uhfRs/OWk6crjOJmo6FPdm1ATpH7/qsOAucNooAZr7Pz+2eAk4xEByasycuUA=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=14n/fZsH6XIDt3Yb0+F2Kdw2ARBTT/QWjjsH3yWCGfuSbFnXO6jsQENk0gxV76DH2dkQN+GXOZblZYfrpSytJQ=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -310,7 +310,7 @@
           <li><a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a></li>
           <li><a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a></li>
           <li>
-            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="NO7qh0GoCBXgc+OsMhLCU1kFBK4fT6kIXpa+QSXrfSzoS/reIzT1XUmMTi1TMuE0czVTKpIWjgNVWsLufDEF/g==" />
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="tP6pYiuIkKusoVAckNw83rS01LsicpPj/zdNumRu/WhoW7k7SRRt4wVe/Z3x/B+5noSDP68rtOj0+zEVPbSFug==" />
               <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
                 Sign out
               </button>
@@ -323,7 +323,7 @@
 
 
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="hhaU+I4fi5jvGTD+mBAjzKpOAHGe2NcsaJF/OiSYueNas4Sh7IN20EbmnX/5MACrgH5X9ROB8CdjXQOVfULBMQ==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="4OurmnUmI050redL17tdT7hJGHbz4beZi+GSx2aix/o8TrvDF7reBt1SSsq2m34oknlP8n64kJKALe5oP3i/KA==" />
           <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
             Sign out
           </button>
@@ -362,7 +362,7 @@
 
       <ul class="pagehead-actions">
   <li>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="d7sttUofcD9EnKvPCalLmdPkXzlsl+uj17dmXx2/8eKXpLmu0JApAqrPPmgpVWOOH2HA+Pvzno3aVIZIgwaI2Q==" />      <input type="hidden" name="repository_id" id="repository_id" value="149007287" class="form-control" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="w9JgthAi1gVWF1XjeBoxUHkcN3OFGZDrAyQgbYPTDZYjzfStiq2POLhEwERY5hlHtZmoshJ95cUOx8B6HWp0rQ==" />      <input type="hidden" name="repository_id" id="repository_id" value="149007287" class="form-control" />
 
       <details class="details-reset details-overlay select-menu float-left">
         <summary class="btn btn-sm btn-with-count select-menu-button" data-ga-click="Repository, click Watch settings, action:blob#show">
@@ -425,7 +425,7 @@
   <li>
     
   <div class="js-toggler-container js-social-container starring-container ">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/HourGlss/HourCrypto/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="SNXn+DH/fvSlIT0WdmmV0l2R5nrHW8ydz6Gn0biLkoRfQs41Jbke95kTkpKIlznsXcj1yJgnqTyhvjfJ08cVNw==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/HourGlss/HourCrypto/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="RCWixQ81nLsjX/Fweqf+DBq52nSjjbHZaAVSu9Wd3xNTsosIG3P8uB9tXvSEWVIyGuDJxvzx1HgGGsKjvtFYoA==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -440,7 +440,7 @@
           0
         </a>
 </form>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/HourGlss/HourCrypto/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="xfQSsI/QDUYFN9Qj9t8ZZ7l6HJF9m5LyZIqiLRKhKXK25OA1np5FxUVLA997lbdMVfqNOJC3/mYt4UHqH+R5nA==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/HourGlss/HourCrypto/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="12zoxwJkz99KgfZXRLUSDt+iOd1VZy+SQ/DLjz0decOkfBpCEyqHXAr9IavJ/7wlMyKodLhLQwYKmyhIMFgpLQ==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -556,9 +556,9 @@
     
 
   
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/HourGlss/HourCrypto/blob/f1061f24d627f6770985a24877e68a01a9da0aca/Mining/Variables.py">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/HourGlss/HourCrypto/blob/f1061f24d627f6770985a24877e68a01a9da0aca/User/User.py">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v21:8f51f1c2921985cda80a229c0d090d07 -->
+    <!-- blob contrib key: blob_contributors:v21:a892291e708049afb91208bdf450db66 -->
 
     
 
@@ -602,7 +602,7 @@
 
 
             <a class="select-menu-item js-navigation-item js-navigation-open selected"
-               href="/HourGlss/HourCrypto/blob/master/Mining/Variables.py"
+               href="/HourGlss/HourCrypto/blob/master/User/User.py"
                data-name="master"
                data-skip-pjax="true"
                rel="nofollow">
@@ -641,21 +641,64 @@
         </clipboard-copy>
       </div>
       <div id="blob-path" class="breadcrumb">
-        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto"><span>HourCrypto</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto/tree/master/Mining"><span>Mining</span></a></span><span class="separator">/</span><strong class="final-path">Variables.py</strong>
+        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto"><span>HourCrypto</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/HourGlss/HourCrypto/tree/master/User"><span>User</span></a></span><span class="separator">/</span><strong class="final-path">User.py</strong>
       </div>
     </div>
 
 
-    <include-fragment src="/HourGlss/HourCrypto/contributors/master/Mining/Variables.py" class="commit-tease commit-loader">
+    
+  <div class="commit-tease">
+      <span class="float-right">
+        <a class="commit-tease-sha" href="/HourGlss/HourCrypto/commit/b78da01fcab4a731a9cf5807f5be639fd9a7d29f" data-pjax>
+          b78da01
+        </a>
+        <relative-time datetime="2018-09-26T13:19:31Z">Sep 26, 2018</relative-time>
+      </span>
       <div>
-        Fetching contributors&hellip;
+        <a rel="contributor" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=32824287" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/azb40420"><img class="avatar" src="https://avatars1.githubusercontent.com/u/32824287?s=40&amp;v=4" width="20" height="20" alt="@azb40420" /></a>
+        <a class="user-mention" rel="contributor" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=32824287" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/azb40420">azb40420</a>
+          <a data-pjax="true" title="Adding logging to project" class="message" href="/HourGlss/HourCrypto/commit/b78da01fcab4a731a9cf5807f5be639fd9a7d29f">Adding logging to project</a>
       </div>
 
-      <div class="commit-tease-contributors">
-          <img alt="" class="loader-loading float-left" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
-        <span class="loader-error">Cannot retrieve contributors at this time</span>
-      </div>
-</include-fragment>
+    <div class="commit-tease-contributors">
+      
+<details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark float-left mr-2" id="blob_contributors_box">
+  <summary class="btn-link" aria-haspopup="dialog"  >
+    
+    <span><strong>2</strong> contributors</span>
+  </summary>
+  <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast " aria-label="Users who have contributed to this file">
+    <div class="Box-header">
+      <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <h3 class="Box-title">Users who have contributed to this file</h3>
+    </div>
+    
+        <ul class="list-style-none overflow-auto">
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="/HourGlss">
+                <img class="avatar mr-2" alt="" src="https://avatars0.githubusercontent.com/u/1668760?s=40&amp;v=4" width="20" height="20" />
+                HourGlss
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="/azb40420">
+                <img class="avatar mr-2" alt="" src="https://avatars1.githubusercontent.com/u/32824287?s=40&amp;v=4" width="20" height="20" />
+                azb40420
+</a>            </li>
+        </ul>
+
+  </details-dialog>
+</details>
+          <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=1668760" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/HourGlss/HourCrypto/commits/master/User/User.py?author=HourGlss">
+      <img class="avatar" src="https://avatars0.githubusercontent.com/u/1668760?s=40&amp;v=4" width="20" height="20" alt="@HourGlss" /> 
+</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=32824287" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/HourGlss/HourCrypto/commits/master/User/User.py?author=azb40420">
+      <img class="avatar" src="https://avatars1.githubusercontent.com/u/32824287?s=40&amp;v=4" width="20" height="20" alt="@azb40420" /> 
+</a>
+
+    </div>
+  </div>
+
 
 
     <div class="file ">
@@ -663,25 +706,25 @@
   <div class="file-actions">
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/raw/master/Mining/Variables.py">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/HourGlss/HourCrypto/blame/master/Mining/Variables.py">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/commits/master/Mining/Variables.py">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/raw/master/User/User.py">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/HourGlss/HourCrypto/blame/master/User/User.py">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/HourGlss/HourCrypto/commits/master/User/User.py">History</a>
     </div>
 
         <a class="btn-octicon tooltipped tooltipped-nw"
-           href="github-windows://openRepo/https://github.com/HourGlss/HourCrypto?branch=master&amp;filepath=Mining%2FVariables.py"
+           href="github-windows://openRepo/https://github.com/HourGlss/HourCrypto?branch=master&amp;filepath=User%2FUser.py"
            aria-label="Open this file in GitHub Desktop"
            data-ga-click="Repository, open with desktop, type:windows">
             <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
         </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/HourGlss/HourCrypto/edit/master/Mining/Variables.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="DAXCKlcBJcrHkDe1qUlpXmprL/VFpC9xd7CDOtVs9kaAZCNoB2X61qliAPK+2QwEK9npzBpWQy1zTV7ma3VOUg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/HourGlss/HourCrypto/edit/master/User/User.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="s4xK9674BK1zva6mWaEtUm/Ezt+GAHPY0h6Qc5xIYud0FqqJhufqiFe5c0B09QpvaJQ7peMvtIBzXFWaSYsHUg==" />
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Edit the file in your fork of this project" data-hotkey="e" data-disable-with>
               <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
             </button>
 </form>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/HourGlss/HourCrypto/delete/master/Mining/Variables.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="4Ezgir7Usbmt6EJaXPtfxoozvnq03GJ/ReNwHHQsLMcswBENuNSS533XGlxi0bLM0ICApTeVcgIFfteUzjCBUg==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/HourGlss/HourCrypto/delete/master/User/User.py" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="5I3YgzlITSpVcRVrg/1383q0c8KSKjQMEfDSR+55PGhZpsR6W6JkYBdwWfG9KnCDUyavmK/2Bl79KIS2xfd0Vg==" />
           <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
             aria-label="Delete the file in your fork of this project" data-disable-with>
             <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
@@ -689,9 +732,9 @@
 </form>  </div>
 
   <div class="file-info">
-      11 lines (10 sloc)
+      3 lines (3 sloc)
       <span class="file-info-divider"></span>
-    356 Bytes
+    210 Bytes
   </div>
 </div>
 
@@ -701,48 +744,15 @@
       <table class="highlight tab-size js-file-line-container" data-tab-size="8">
       <tr>
         <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
-        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> logging</td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">password <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Desktop boys<span class="pl-pds">&quot;</span></span></td>
       </tr>
       <tr>
         <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
-        <td id="LC2" class="blob-code blob-code-inner js-file-line">logging.info(<span class="pl-s"><span class="pl-pds">&quot;</span>Loading Variables<span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line">private_key <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>49ddb1037ed00bb40ee31ece4053fc4adf41ba7870fd522c104d40b524b0a4d3<span class="pl-pds">&quot;</span></span></td>
       </tr>
       <tr>
         <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
-        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">WORK</span> <span class="pl-k">=</span> <span class="pl-c1">18</span></td>
-      </tr>
-      <tr>
-        <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">PEER_NODES</span> <span class="pl-k">=</span> []</td>
-      </tr>
-      <tr>
-        <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">MINER_NODE_URL</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>127.0.0.1<span class="pl-pds">&quot;</span></span></td>
-      </tr>
-      <tr>
-        <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">PORT</span> <span class="pl-k">=</span> <span class="pl-c1">5000</span></td>
-      </tr>
-      <tr>
-        <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
-        <td id="LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">BLOCKCHAIN</span> <span class="pl-k">=</span> []</td>
-      </tr>
-      <tr>
-        <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">PENDING_TRANSACTIONS</span> <span class="pl-k">=</span> []</td>
-      </tr>
-      <tr>
-        <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line">logging.debug(<span class="pl-s"><span class="pl-pds">&quot;</span>work: <span class="pl-c1">{}</span> peers:<span class="pl-c1">{}</span> node_url:<span class="pl-c1">{}</span> port: <span class="pl-c1">{}</span> blockchain: <span class="pl-c1">{}</span> pending: <span class="pl-c1">{}</span><span class="pl-pds">&quot;</span></span>.format(<span class="pl-c1">WORK</span>,<span class="pl-c1">PEER_NODES</span>,<span class="pl-c1">MINER_NODE_URL</span>,<span class="pl-c1">PORT</span>,<span class="pl-c1">BLOCKCHAIN</span>,<span class="pl-c1">PENDING_TRANSACTIONS</span>))</td>
-      </tr>
-      <tr>
-        <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line">logging.info(<span class="pl-s"><span class="pl-pds">&quot;</span>Done loading Variables<span class="pl-pds">&quot;</span></span>)</td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line">public_key <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>uI1QVm5l1Z5rwhPj5ebj2fNWxgbmgNwavzXiviW5mXs3Uw8ZQBnXE/uGOdUvqnNrnnHoKAouq87nWILB3iQTig==<span class="pl-pds">&quot;</span></span></td>
       </tr>
 </table>
 
@@ -754,7 +764,7 @@
       <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy link">Copy link</clipboard-copy></li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/HourGlss/HourCrypto/blame/f1061f24d627f6770985a24877e68a01a9da0aca/Mining/Variables.py">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/HourGlss/HourCrypto/blame/f1061f24d627f6770985a24877e68a01a9da0aca/User/User.py">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/HourGlss/HourCrypto/issues/new">Open new issue</a></li>
       </ul>
     </details-menu>
@@ -789,7 +799,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2018 <span title="0.22666s from unicorn-3249217539-1q6jl">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2018 <span title="0.24356s from unicorn-6c9bd9fd8f-s7z92">GitHub</span>, Inc.</li>
         <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
