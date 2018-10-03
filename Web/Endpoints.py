@@ -4,10 +4,10 @@ import requests
 import logging
 import inspect
 
-import Utilities.Utility as Utility
-from Mining.Block import Block
+import Utility.Utility as Utility
+from Miner.Block import Block
 import User.User as User
-import Mining.Variables as variables
+import Miner.Variables as variables
 node = Flask(__name__)
 q = None
 def start(a):
