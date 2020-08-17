@@ -15,7 +15,7 @@ PoM (Proof of Magic) utilizes the "Kameas Logarithm" for mining the sprinks used
 
 Mining Sprinks will produce Magic Sigils that are archived and indexed in the Grimoire Dictionary.
 
-A Dragot coins are rewarded for mining Sprinks and generating three Magic Sigils in the Grimoire Dictionary.
+Dragot coins are rewarded for mining Sprinks and generating three Magic Sigils in the Grimoire Dictionary.
 
 The Sprinkler-Chain communicates using the "Python Flask Framework" (PFF) providing blockchain endpoint mapping, allowing data transfer via the HTTPS protocol.
 
